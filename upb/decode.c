@@ -250,6 +250,10 @@ static upb_msg *upb_addmsg(upb_decframe *frame,
   upb_msg *submsg;
   upb_array *arr = upb_getorcreatearr(frame, field);
 
+  UPB_ASSERT(field->label == UPB_LABEL_REPEATED);
+  UPB_ASSERT(field->descriptortype == UPB_DESCRIPTOR_TYPE_MESSAGE ||
+             field->descriptortype == UPB_DESCRIPTOR_TYPE_GROUP);
+
   *subm = frame->layout->submsgs[field->submsg_index];
   submsg = _upb_msg_new(*subm, frame->state->arena);
   CHK(submsg);
@@ -488,19 +492,7 @@ static bool upb_decode_mapfield(upb_decstate *d, upb_decframe *frame,
                                 const upb_msglayout_field *field, int len) {
   upb_map *map = *(upb_map**)&frame->msg[field->offset];
   const upb_msglayout *entry = frame->layout->submsgs[field->submsg_index];
-
-  /* The compiler ensures that all map entry messages have this layout. */
-  struct map_entry {
-    upb_msg_internal internal;
-    union {
-      upb_strview str;  /* For str/bytes. */
-      upb_value val;    /* For all other types. */
-    } k;
-    union {
-      upb_strview str;  /* For str/bytes. */
-      upb_value val;    /* For all other types. */
-    } v;
-  } ent;
+  upb_map_entry ent;
 
   if (!map) {
     /* Lazily create map. */
