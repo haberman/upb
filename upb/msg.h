@@ -74,9 +74,6 @@ typedef struct {
   upb_msg_internal base;
 } upb_msg_internal_withext;
 
-/* Maps upb_fieldtype_t -> memory size. */
-extern char _upb_fieldtype_to_size[12];
-
 /* Creates a new messages with the given layout on the given arena. */
 upb_msg *_upb_msg_new(const upb_msglayout *l, upb_arena *a);
 
@@ -100,8 +97,24 @@ UPB_INLINE bool _upb_clearhas(const void *msg, size_t idx) {
   return (*PTR_AT(msg, idx / 8, char)) &= (char)(~(1 << (idx % 8)));
 }
 
-UPB_INLINE bool _upb_has_oneof_field(const void *msg, size_t case_ofs, int32_t num) {
+UPB_INLINE bool _upb_has_oneof_field(const void *msg, size_t case_ofs,
+                                     int32_t num) {
   return *PTR_AT(msg, case_ofs, int32_t) == num;
+}
+
+UPB_INLINE void _upb_read_oneof(const void *msg, size_t field_size,
+                                size_t field_ofs, size_t case_ofs,
+                                int32_t case_num, void *val) {
+  if (_upb_has_oneof_field(msg, case_ofs, case_num)) {
+    memcpy(val, PTR_AT(msg, field_ofs, char), field_size);
+  }
+}
+
+UPB_INLINE void _upb_write_oneof(void *msg, size_t field_size,
+                                 size_t field_ofs, size_t case_ofs,
+                                 int32_t case_num, const void *val) {
+  *PTR_AT(msg, case_ofs, int32_t) = case_num;
+  memcpy(PTR_AT(msg, field_ofs, char), val, field_size);
 }
 
 /** upb_array *****************************************************************/

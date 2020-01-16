@@ -433,11 +433,13 @@ void GenerateMessageInHeader(const protobuf::Descriptor* message, Output& output
     } else if (field->containing_oneof()) {
       output(
           "UPB_INLINE $0 $1_$2(const $1 *msg) { "
-          "return UPB_READ_ONEOF(msg, $0, $3, $4, $5, $6); }\n",
-          CTypeConst(field), msgname, field->name(),
+          "$0 val = $3; "
+          "_upb_read_oneof(msg, sizeof(val), $4, $5, $6, &val); "
+          "return val; }\n",
+          CTypeConst(field), msgname, field->name(), FieldDefault(field),
           GetSizeInit(layout.GetFieldOffset(field)),
           GetSizeInit(layout.GetOneofCaseOffset(field->containing_oneof())),
-          field->number(), FieldDefault(field));
+          field->number());
     } else {
       output(
           "UPB_INLINE $0 $1_$2(const $1 *msg) { "
@@ -546,9 +548,9 @@ void GenerateMessageInHeader(const protobuf::Descriptor* message, Output& output
                 : "sizeof(" + CType(field) + ")");
       } else if (field->containing_oneof()) {
         output(
-            "  UPB_WRITE_ONEOF(msg, $0, $1, value, $2, $3);\n"
+            "  _upb_write_oneof(msg, sizeof(value), $0, $1, $2, &value);\n"
             "}\n",
-            CType(field), GetSizeInit(layout.GetFieldOffset(field)),
+            GetSizeInit(layout.GetFieldOffset(field)),
             GetSizeInit(layout.GetOneofCaseOffset(field->containing_oneof())),
             field->number());
       } else {

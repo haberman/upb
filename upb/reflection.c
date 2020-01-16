@@ -60,31 +60,28 @@ static bool in_oneof(const upb_msglayout_field *field) {
   return field->presence < 0;
 }
 
-static uint32_t *oneofcase(const upb_msg *msg,
-                           const upb_msglayout_field *field) {
-  UPB_ASSERT(in_oneof(field));
-  return PTR_AT(msg, ~field->presence, uint32_t);
-}
-
 bool upb_msg_has(const upb_msg *msg, const upb_fielddef *f) {
+  UPB_ASSERT(upb_fielddef_haspresence(f));
   const upb_msglayout_field *field = upb_fielddef_layout(f);
-  UPB_ASSERT(field->presence);
   if (in_oneof(field)) {
-    return *oneofcase(msg, field) == field->number;
+    return _upb_has_oneof_field(msg, ~field->presence, field->number);
   } else {
-    uint32_t hasbit = field->presence;
-    return *PTR_AT(msg, hasbit / 8, char) | (1 << (hasbit % 8));
+    return _upb_has_field(msg, field->presence);
   }
 }
 
 upb_msgval upb_msg_get(const upb_msg *msg, const upb_fielddef *f) {
-  const upb_msglayout_field *field = upb_fielddef_layout(f);
-  const char *mem = PTR_AT(msg, field->offset, char);
   upb_msgval val;
-  if (field->presence == 0 || upb_msg_has(msg, f)) {
-    int size = upb_fielddef_isseq(f) ? sizeof(void *)
-                                     : field_size[field->descriptortype];
-    memcpy(&val, mem, size);
+  const upb_msglayout_field *field = upb_fielddef_layout(f);
+  size_t size = field_size[field->descriptortype];
+
+  if (field->label == UPB_LABEL_REPEATED) {
+    memcpy(&val, PTR_AT(msg, field->offset, char), sizeof(void*));
+  } else if (in_oneof(field)) {
+    _upb_read_oneof(
+        msg, size, field->offset, ~field->presence, field->number, &val);
+  } else if (field->presence == 0 || _upb_has_field(msg, field->presence)) {
+    memcpy(&val, PTR_AT(msg, field->offset, char), size);
   } else {
     /* TODO(haberman): change upb_fielddef to not require this switch(). */
     switch (upb_fielddef_type(f)) {
@@ -149,15 +146,20 @@ void upb_msg_set(upb_msg *msg, const upb_fielddef *f, upb_msgval val,
                  upb_arena *a) {
   const upb_msglayout_field *field = upb_fielddef_layout(f);
   char *mem = PTR_AT(msg, field->offset, char);
-  int size = upb_fielddef_isseq(f) ? sizeof(void *)
-                                   : field_size[field->descriptortype];
-  memcpy(mem, &val, size);
-  if (in_oneof(field)) {
-    *oneofcase(msg, field) = field->number;
+  size_t size = field_size[field->descriptortype];
+
+  if (field->label == UPB_LABEL_REPEATED) {
+    memcpy(mem, &val, sizeof(void*));
+  } else if (in_oneof(field)) {
+    _upb_write_oneof(
+        msg, size, field->offset, ~field->presence, field->number, &val);
+  } else {
+    if (field->presence > 0) {
+      _upb_sethas(msg, field->presence);
+    }
+    memcpy(mem, &val, size);
   }
 }
-
-#undef DEREF
 
 /** upb_array *****************************************************************/
 
