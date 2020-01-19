@@ -7,6 +7,14 @@
 
 #define VOIDPTR_AT(msg, ofs) (void*)((char*)msg + (int)ofs)
 
+static size_t roundup_pow2(size_t bytes) {
+  size_t ret = 32;
+  while (ret < bytes) {
+    ret *= 2;
+  }
+  return ret;
+}
+
 /** upb_msg *******************************************************************/
 
 static char _upb_fieldtype_to_sizelg2[12] = {
@@ -30,7 +38,11 @@ static uintptr_t tag_arrptr(void* ptr, int elem_size_lg2) {
 }
 
 static int upb_msg_internalsize(const upb_msglayout *l) {
-  return sizeof(upb_msg_internal) - l->extendable * sizeof(void *);
+  if (l->extendable) {
+    return sizeof(upb_msg_internal_withext);
+  } else {
+    return sizeof(upb_msg_internal);
+  }
 }
 
 static size_t upb_msg_sizeof(const upb_msglayout *l) {
@@ -45,58 +57,62 @@ static const upb_msg_internal *upb_msg_getinternal_const(const upb_msg *msg) {
   return VOIDPTR_AT(msg, -sizeof(upb_msg_internal));
 }
 
+/*
 static upb_msg_internal_withext *upb_msg_getinternalwithext(
     upb_msg *msg, const upb_msglayout *l) {
   UPB_ASSERT(l->extendable);
   return VOIDPTR_AT(msg, -sizeof(upb_msg_internal_withext));
 }
+*/
 
 upb_msg *_upb_msg_new(const upb_msglayout *l, upb_arena *a) {
   upb_alloc *alloc = upb_arena_alloc(a);
-  void *mem = upb_malloc(alloc, upb_msg_sizeof(l));
-  upb_msg_internal *in;
-  upb_msg *msg;
+  size_t size = upb_msg_sizeof(l);
+  void *mem = upb_malloc(alloc, size);
 
   if (!mem) {
     return NULL;
   }
 
-  msg = VOIDPTR_AT(mem, upb_msg_internalsize(l));
+  /* All members (normal members and internal members) are zero-initialized. */
+  memset(mem, 0, size);
 
-  /* Initialize normal members. */
-  memset(msg, 0, l->size);
-
-  /* Initialize internal members. */
-  in = upb_msg_getinternal(msg);
-  in->unknown = NULL;
-  in->unknown_len = 0;
-  in->unknown_size = 0;
-
-  if (l->extendable) {
-    upb_msg_getinternalwithext(msg, l)->extdict = NULL;
-  }
-
-  return msg;
+  return VOIDPTR_AT(mem, upb_msg_internalsize(l));
 }
 
 void upb_msg_addunknown(upb_msg *msg, const char *data, size_t len,
                         upb_arena *arena) {
   upb_msg_internal *in = upb_msg_getinternal(msg);
-  if (len > in->unknown_size - in->unknown_len) {
+
+  if (!in->unknown) {
     upb_alloc *alloc = upb_arena_alloc(arena);
-    size_t need = in->unknown_size + len;
-    size_t newsize = UPB_MAX(in->unknown_size * 2, need);
-    in->unknown = upb_realloc(alloc, in->unknown, in->unknown_size, newsize);
-    in->unknown_size = newsize;
+    size_t cap = roundup_pow2(len);
+    size_t size = upb_unknown_sizeof(cap);
+    in->unknown = upb_malloc(alloc, size);
+    in->unknown->capacity = cap;
+    in->unknown->size = 0;
+  } else if (len > in->unknown->capacity - in->unknown->size) {
+    upb_alloc *alloc = upb_arena_alloc(arena);
+    size_t cap = roundup_pow2(in->unknown->size + len);
+    size_t size = upb_unknown_sizeof(cap);
+    in->unknown = upb_realloc(alloc, in->unknown, in->unknown->capacity, size);
+    in->unknown->capacity = cap;
   }
-  memcpy(in->unknown + in->unknown_len, data, len);
-  in->unknown_len += len;
+
+  memcpy(&in->unknown->bytes[in->unknown->size], data, len);
+  in->unknown->size += len;
 }
 
 const char *upb_msg_getunknown(const upb_msg *msg, size_t *len) {
   const upb_msg_internal* in = upb_msg_getinternal_const(msg);
-  *len = in->unknown_len;
-  return in->unknown;
+
+  if (in->unknown) {
+    *len = in->unknown->size;
+    return &in->unknown->bytes[0];
+  } else {
+    *len = 0;
+    return NULL;
+  }
 }
 
 /** upb_array *****************************************************************/

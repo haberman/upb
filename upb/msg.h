@@ -61,11 +61,19 @@ typedef struct upb_msglayout {
  * compatibility.  We put these before the user's data.  The user's upb_msg*
  * points after the upb_msg_internal. */
 
+typedef struct {
+  int size;
+  int capacity;
+  char bytes[1];  /* True size is |capacity|. */
+} upb_unknown;
+
+UPB_INLINE size_t upb_unknown_sizeof(size_t n) {
+  return offsetof(upb_unknown, bytes[n]);
+}
+
 /* Used when a message is not extendable. */
 typedef struct {
-  char *unknown;
-  size_t unknown_len;
-  size_t unknown_size;
+  upb_unknown* unknown;
 } upb_msg_internal;
 
 /* Used when a message is extendable. */
