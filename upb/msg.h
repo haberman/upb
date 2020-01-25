@@ -51,7 +51,12 @@ typedef struct upb_msglayout {
   /* Must be aligned to sizeof(void*).  Doesn't include internal members like
    * unknown fields, extension dict, pointer to msglayout, etc. */
   uint16_t size;
-  uint16_t field_count;
+  /* Elements in the |fields| array. Some of these may be empty (0 field number)
+   * because they are empty slots in the indexable portion. */
+  uint16_t field_elements;
+  /* Field numbers <= |max_indexable| can be directly indexed.  This is always
+   * <= |field_elements|. */
+  /*uint16_t max_indexable;*/
   bool extendable;
 } upb_msglayout;
 

@@ -359,8 +359,10 @@ bool upb_encode_message(upb_encstate *e, const char *msg,
     upb_put_bytes(e, unknown, unknown_size);
   }
 
-  for (i = m->field_count - 1; i >= 0; i--) {
+  for (i = m->field_elements - 1; i >= 0; i--) {
     const upb_msglayout_field *f = &m->fields[i];
+
+    if (f->number == 0) continue;
 
     if (f->label == UPB_LABEL_REPEATED) {
       CHK(upb_encode_array(e, msg + f->offset, m, f));

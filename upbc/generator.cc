@@ -138,16 +138,29 @@ std::vector<const protobuf::EnumDescriptor*> SortedEnums(
 
 std::vector<const protobuf::FieldDescriptor*> FieldNumberOrder(
     const protobuf::Descriptor* message) {
-  std::vector<const protobuf::FieldDescriptor*> messages;
+  std::vector<const protobuf::FieldDescriptor*> fields;
   for (int i = 0; i < message->field_count(); i++) {
-    messages.push_back(message->field(i));
+    fields.push_back(message->field(i));
   }
-  std::sort(messages.begin(), messages.end(),
+  std::sort(fields.begin(), fields.end(),
             [](const protobuf::FieldDescriptor* a,
                const protobuf::FieldDescriptor* b) {
               return a->number() < b->number();
             });
-  return messages;
+  return fields;
+}
+
+std::vector<const protobuf::FieldDescriptor*> FieldIndexOrder(
+    const protobuf::Descriptor* message) {
+  std::vector<const protobuf::FieldDescriptor*> fields;
+  for (int i = 0; i < message->field_count(); i++) {
+    const protobuf::FieldDescriptor* field = message->field(i);
+    if (fields.size() < (size_t)field->number() + 1) {
+      fields.resize(field->number() + 1);
+    }
+    fields[field->number()] = field;
+  }
+  return fields;
 }
 
 std::vector<const protobuf::FieldDescriptor*> SortedSubmessages(
@@ -727,13 +740,18 @@ void WriteSource(const protobuf::FileDescriptor* file, Output& output) {
     }
 
     std::vector<const protobuf::FieldDescriptor*> field_number_order =
-        FieldNumberOrder(message);
+        FieldIndexOrder(message);
     if (!field_number_order.empty()) {
       std::string fields_array_name = msgname + "__fields";
       fields_array_ref = "&" + fields_array_name + "[0]";
       output("static const upb_msglayout_field $0[$1] = {\n",
              fields_array_name, field_number_order.size());
       for (auto field : field_number_order) {
+        if (!field) {
+          output("  {0},\n");
+          continue;
+        }
+
         int submsg_index = 0;
         std::string presence = "0";
 

@@ -552,14 +552,11 @@ static const char *upb_decode_delimitedfield(const char *ptr,
 static const upb_msglayout_field *upb_find_field(const upb_msglayout *l,
                                                  uint32_t field_number) {
   /* Lots of optimization opportunities here. */
-  int i;
-  for (i = 0; i < l->field_count; i++) {
-    if (l->fields[i].number == field_number) {
-      return &l->fields[i];
-    }
+  if (field_number < l->field_elements && l->fields[field_number].number != 0) {
+    return &l->fields[field_number];
+  } else {
+    return NULL;
   }
-
-  return NULL;  /* Unknown field. */
 }
 
 static const char *upb_decode_field(const char *ptr,

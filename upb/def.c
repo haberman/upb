@@ -911,7 +911,7 @@ static bool make_layout(const upb_symtab *symtab, const upb_msgdef *m) {
     return false;
   }
 
-  l->field_count = upb_msgdef_numfields(m);
+  /*l->field_count = upb_msgdef_numfields(m);*/
   l->fields = fields;
   l->submsgs = submsgs;
 
@@ -1321,7 +1321,7 @@ static bool create_fielddef(
 
     if (ctx->layouts) {
       const upb_msglayout_field *fields = m->layout->fields;
-      int count = m->layout->field_count;
+      int count = 0; /*m->layout->field_count;*/
       bool found = false;
       int i;
       for (i = 0; i < count; i++) {
