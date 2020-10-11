@@ -1,0 +1,22 @@
+licenses(["notice"])
+
+exports_files(["LICENSE.txt"])
+
+package(default_visibility = ["//visibility:public"])
+
+cc_library(
+  name = "nanopb_enable_malloc",
+  visibility = ["//visibility:public"],
+  defines = ["PB_ENABLE_MALLOC"],
+  hdrs = [
+    "pb.h",
+    "pb_common.h",
+    "pb_decode.h",
+    "pb_encode.h",
+  ],
+  srcs = [
+    "pb_common.c",
+    "pb_decode.c",
+    "pb_encode.c",
+  ],
+)

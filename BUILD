@@ -356,8 +356,20 @@ cc_binary(
     deps = [
         ":descriptor_upb_proto",
         ":descriptor_upbreflection",
+        ":descriptor_nanopb_proto",
         "@com_github_google_benchmark//:benchmark_main",
         "@com_google_protobuf//:protobuf",
+        "@com_github_nanopb_nanopb//:nanopb_enable_malloc",
+    ],
+)
+
+cc_library(
+    name = "descriptor_nanopb_proto",
+    testonly = 1,
+    srcs = ["third_party/nanopb/descriptor.pb.c"],
+    hdrs = ["third_party/nanopb/descriptor.pb.h"],
+    deps = [
+        "@com_github_nanopb_nanopb//:nanopb_enable_malloc",
     ],
 )
 
