@@ -21,6 +21,11 @@ const char *fastdecode_dispatch(upb_decstate *d, const char *ptr, upb_msg *msg,
                                 const upb_msglayout *table, uint64_t hasbits);
 const char *fastdecode_err(upb_decstate *d);
 
+UPB_INLINE upb_msg *fastdecode_synchasbits(upb_msg *msg, uint64_t hasbits) {
+  msg = (void*)((uintptr_t)msg & (int64_t)-8);
+  *(uint32_t*)msg |= hasbits >> 16;  /* Sync hasbits. */
+  return msg;
+}
 
 UPB_INLINE
 upb_msg *decode_newmsg_ceil(upb_decstate *d, const upb_msglayout *l,

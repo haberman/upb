@@ -23,14 +23,23 @@ typedef enum {
   CARD_r = 2   /* Repeated */
 } upb_card;
 
+#ifdef __BMI2__
+#include <immintrin.h>
+#endif
+
 UPB_FORCEINLINE
 const char *fastdecode_tag_dispatch(upb_decstate *d, const char *ptr, upb_msg *msg,
                                 const upb_msglayout *table, uint64_t hasbits, uint32_t tag) {
   uint64_t data;
   size_t idx;
-  idx = (tag & table->table_mask);
-  __builtin_assume((idx & 7) == 0);
-  idx >>= 3;
+  uint32_t mask_idx = (uintptr_t)msg & 7;
+  //uint32_t mask_idx = table->mask_idx;
+  idx = tag >> 3;
+#ifdef __BMI2__
+  idx = _bzhi_u32(idx, mask_idx);
+#else
+  idx &= (1 << mask_idx) - 1;
+#endif
   data = table->fasttable[idx].field_data ^ tag;
   return table->fasttable[idx].field_parser(UPB_PARSE_ARGS);
 }
@@ -47,7 +56,7 @@ const char *fastdecode_dispatch(upb_decstate *d, const char *ptr, upb_msg *msg,
                                 const upb_msglayout *table, uint64_t hasbits) {
   if (UPB_UNLIKELY(ptr >= d->fastlimit)) {
     if (UPB_LIKELY(ptr == d->limit)) {
-      *(uint32_t*)msg |= hasbits >> 16;  /* Sync hasbits. */
+      fastdecode_synchasbits(msg, hasbits);
       return ptr;
     }
     uint64_t data = 0;
@@ -71,7 +80,7 @@ static void *fastdecode_getfield_ofs(upb_decstate *d, const char *ptr,
                                      uint64_t *hasbits, upb_array **outarr,
                                      void **end, int valbytes,
                                      upb_card card, bool hasbit_is_idx) {
-  size_t ofs = *data >> 48;
+  size_t ofs = (int64_t)*data >> 48;
   void *field = (char *)msg + ofs;
 
   switch (card) {
@@ -86,8 +95,7 @@ static void *fastdecode_getfield_ofs(upb_decstate *d, const char *ptr,
       uint8_t elem_size_lg2 = __builtin_ctz(valbytes);
       upb_array **arr_p = field;
       upb_array *arr;
-      *hasbits >>= 16;
-      *(uint32_t*)msg |= *hasbits;
+      fastdecode_synchasbits(msg, *hasbits);
       *hasbits = 0;
       if (UPB_LIKELY(!*arr_p)) {
         const size_t initial_len = 8;
@@ -125,10 +133,6 @@ static void *fastdecode_getfield(upb_decstate *d, const char *ptr, upb_msg *msg,
 }
 
 /* varint fields **************************************************************/
-
-#ifdef __BMI2__
-#include <immintrin.h>
-#endif
 
 UPB_FORCEINLINE uint64_t fastdecode_munge(uint64_t val, int valbytes, bool zigzag) {
   if (valbytes == 1) {
@@ -265,9 +269,9 @@ const char *upb_pos_2bt(UPB_PARSE_PARAMS) {
 
 /* message fields *************************************************************/
 
-UPB_NOINLINE static
-const char *fastdecode_lendelim_submsg(upb_decstate *d, const char *ptr, upb_msg *msg,
-                                const upb_msglayout *table, uint64_t hasbits, const char* saved_limit) {
+UPB_NOINLINE static const char *fastdecode_lendelim_submsg(
+    upb_decstate *d, const char *ptr, upb_msg *msg, const upb_msglayout *table,
+    uint64_t hasbits, const char *saved_limit) {
   size_t len = (uint8_t)ptr[-1];
   if (UPB_UNLIKELY(len & 0x80)) {
     int i;
@@ -289,6 +293,8 @@ done:
   }
   d->limit = ptr + len;
   d->fastlimit = UPB_MIN(d->limit, d->fastend);
+
+  msg = (void*)((uintptr_t)msg | table->mask_idx);
 
   return fastdecode_dispatch(d, ptr, msg, table, hasbits);
 }
@@ -313,7 +319,7 @@ static const char *fastdecode_submsg(UPB_PARSE_PARAMS, int tagbytes,
                                    sizeof(upb_msg *), card, true);
 
   if (card == CARD_s) {
-    *(uint32_t*)msg |= hasbits >> 16;
+    fastdecode_synchasbits(msg, hasbits);
     hasbits = 0;
   }
 

@@ -955,7 +955,7 @@ static bool make_layout(const upb_symtab *symtab, const upb_msgdef *m) {
   l->field_count = upb_msgdef_numfields(m);
   l->fields = fields;
   l->submsgs = submsgs;
-  l->table_mask = 0;
+  l->mask_idx = 0;
 
   l->fasttable[0].field_parser = &fastdecode_generic;
   l->fasttable[0].field_data = 0;

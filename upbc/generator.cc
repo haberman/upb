@@ -738,10 +738,21 @@ struct SubmsgArray {
   absl::flat_hash_map<const protobuf::Descriptor*, int> indexes_;
 };
 
+int TableMaskIdx(size_t table_size) {
+  int idx = 0;
+  table_size--;
+  while (table_size) {
+    idx++;
+    table_size >>= 1;
+  }
+  return idx;
+}
+
 typedef std::pair<std::string, MessageLayout::Size> TableEntry;
 
 void TryFillTableEntry(const protobuf::Descriptor* message,
-                       const MessageLayout& layout, int num, TableEntry& ent) {
+                       const MessageLayout& layout, int num, int mask_idx,
+                       TableEntry& ent) {
   const protobuf::FieldDescriptor* field = message->FindFieldByNumber(num);
   if (!field) return;
 
@@ -816,6 +827,10 @@ void TryFillTableEntry(const protobuf::Descriptor* message,
 
   MessageLayout::Size data;
 
+  // Correct offset for the bits we are stealing.
+  offset.size32 -= mask_idx;
+  offset.size64 -= mask_idx;
+  (void)mask_idx;
   data.size32 = ((uint64_t)offset.size32 << 48) | expected_tag;
   data.size64 = ((uint64_t)offset.size64 << 48) | expected_tag;
 
@@ -864,6 +879,7 @@ std::vector<TableEntry> FastDecodeTable(const protobuf::Descriptor* message,
       table_size *= 2;
     }
   }
+  int mask_idx = TableMaskIdx(table_size);
 
   std::vector<TableEntry> table;
   MessageLayout::Size empty_size;
@@ -871,7 +887,7 @@ std::vector<TableEntry> FastDecodeTable(const protobuf::Descriptor* message,
   empty_size.size64 = 0;
   for (int i = 0; i < table_size; i++) {
     table.emplace_back(TableEntry{"fastdecode_generic", empty_size});
-    TryFillTableEntry(message, layout, i, table.back());
+    TryFillTableEntry(message, layout, i, mask_idx, table.back());
   }
   return table;
 }
@@ -973,10 +989,10 @@ void WriteSource(const protobuf::FileDescriptor* file, Output& output) {
     output("const upb_msglayout $0 = {\n", MessageInit(message));
     output("  $0,\n", submsgs_array_ref);
     output("  $0,\n", fields_array_ref);
-    output("  $0,\n", (table.size() - 1) << 3);
-    output("  $0, $1, $2,\n", GetSizeInit(layout.message_size()),
+    output("  $0, $1, $2, $3,\n", GetSizeInit(layout.message_size()),
            field_number_order.size(),
-           "false"  // TODO: extendable
+           "false",  // TODO: extendable
+           TableMaskIdx(table.size())
     );
     output("  {\n");
     for (const auto& ent : table) {
