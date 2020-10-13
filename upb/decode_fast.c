@@ -28,7 +28,7 @@ const char *fastdecode_tag_dispatch(upb_decstate *d, const char *ptr, upb_msg *m
                                 const upb_msglayout *table, uint64_t hasbits, uint32_t tag) {
   uint64_t data;
   size_t idx;
-  idx = (tag & table->table_mask);
+  idx = (tag & (uint8_t)hasbits);
   __builtin_assume((idx & 7) == 0);
   idx >>= 3;
   data = table->fasttable[idx].field_data ^ tag;
@@ -42,7 +42,7 @@ uint32_t fastdecode_load_tag(const char* ptr) {
   return tag;
 }
 
-UPB_NOINLINE
+UPB_FORCEINLINE
 const char *fastdecode_dispatch(upb_decstate *d, const char *ptr, upb_msg *msg,
                                 const upb_msglayout *table, uint64_t hasbits) {
   if (UPB_UNLIKELY(ptr >= d->fastlimit)) {
@@ -265,9 +265,9 @@ const char *upb_pos_2bt(UPB_PARSE_PARAMS) {
 
 /* message fields *************************************************************/
 
-UPB_NOINLINE static
-const char *fastdecode_lendelim_submsg(upb_decstate *d, const char *ptr, upb_msg *msg,
-                                const upb_msglayout *table, uint64_t hasbits, const char* saved_limit) {
+UPB_NOINLINE static const char *fastdecode_lendelim_submsg(
+    upb_decstate *d, const char *ptr, upb_msg *msg, const upb_msglayout *table,
+    const char *saved_limit) {
   size_t len = (uint8_t)ptr[-1];
   if (UPB_UNLIKELY(len & 0x80)) {
     int i;
@@ -290,7 +290,7 @@ done:
   d->limit = ptr + len;
   d->fastlimit = UPB_MIN(d->limit, d->fastend);
 
-  return fastdecode_dispatch(d, ptr, msg, table, hasbits);
+  return fastdecode_dispatch(d, ptr, msg, table, table->table_mask);
 }
 
 UPB_FORCEINLINE
@@ -344,7 +344,7 @@ again:
 
   ptr += tagbytes + 1;
 
-  ptr = fastdecode_lendelim_submsg(d, ptr, child, subl, 0, saved_limit);
+  ptr = fastdecode_lendelim_submsg(d, ptr, child, subl, saved_limit);
 
   if (UPB_UNLIKELY(ptr != d->limit || d->end_group != 0)) {
     return fastdecode_err(d);
@@ -363,7 +363,7 @@ again:
       d->limit = saved_limit;
       d->fastlimit = saved_fastlimit;
       d->depth++;
-      return fastdecode_tag_dispatch(d, ptr, msg, table, hasbits, tag);
+      return fastdecode_tag_dispatch(d, ptr, msg, table, table->table_mask, tag);
     } else {
       if (ptr == saved_limit) {
         arr->len = submsg - (upb_msg**)_upb_array_ptr(arr);
@@ -380,7 +380,7 @@ again:
   d->fastlimit = saved_fastlimit;
   d->depth++;
 
-  return fastdecode_dispatch(d, ptr, msg, table, hasbits);
+  return fastdecode_dispatch(d, ptr, msg, table, table->table_mask);
 
 repeated_generic:
   arr->len = submsg - (upb_msg**)_upb_array_ptr(arr);

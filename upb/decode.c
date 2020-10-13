@@ -621,14 +621,14 @@ const char *fastdecode_generic(upb_decstate *d, const char *ptr, upb_msg *msg,
   if (ptr == d->limit) return ptr;
   ret = decode_field(d, ptr, msg, table);
   if (ret.group_end) return ptr;
-  return fastdecode_dispatch(d, ret.ptr, msg, table, hasbits);
+  return fastdecode_dispatch(d, ret.ptr, msg, table, table->table_mask);
 }
 
 UPB_NOINLINE
 static const char *decode_msg(upb_decstate *d, const char *ptr, upb_msg *msg,
                               const upb_msglayout *layout) {
   if (msg) {
-    ptr = fastdecode_dispatch(d, ptr, msg, layout, 0);
+    ptr = fastdecode_dispatch(d, ptr, msg, layout, layout->table_mask);
   } else {
     while (ptr < d->limit) {
       decode_parseret ret = decode_field(d, ptr, msg, layout);
