@@ -12,55 +12,89 @@
 
 #include "upb/port_def.inc"
 
-static const upb_msglayout *const google_protobuf_FileDescriptorSet_submsgs[1] = {
+const upb_msglayout *const google_protobuf_FileDescriptorSet_submsgs[1] = {
   &google_protobuf_FileDescriptorProto_msginit,
 };
 
-static const upb_msglayout_field google_protobuf_FileDescriptorSet__fields[1] = {
+const upb_msglayout_field google_protobuf_FileDescriptorSet__fields[1] = {
   {1, UPB_SIZE(0, 0), 0, 0, 11, 3},
 };
 
-const upb_msglayout google_protobuf_FileDescriptorSet_msginit = {
-  {
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&upb_prm_1bt_max192b, UPB_SIZE(10, 10)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-  },
-  &google_protobuf_FileDescriptorSet_submsgs[0],
-  &google_protobuf_FileDescriptorSet__fields[0],
-  UPB_SIZE(8, 8), 1, false,
-};
+__asm__(
+".p2align 3\n\t"
+".globl google_protobuf_FileDescriptorSet_msginit\ngoogle_protobuf_FileDescriptorSet_msginit:\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad upb_prm_1bt_max192b\n\t"
+".quad 10\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad google_protobuf_FileDescriptorSet_submsgs\n\t"
+".quad google_protobuf_FileDescriptorSet__fields\n\t"
+".short 8\n\t"
+".short 1\n\t"
+".byte 0\n\t"
+);
 
-static const upb_msglayout *const google_protobuf_FileDescriptorProto_submsgs[6] = {
+const upb_msglayout *const google_protobuf_FileDescriptorProto_submsgs[6] = {
   &google_protobuf_DescriptorProto_msginit,
   &google_protobuf_EnumDescriptorProto_msginit,
   &google_protobuf_FieldDescriptorProto_msginit,
@@ -69,7 +103,7 @@ static const upb_msglayout *const google_protobuf_FileDescriptorProto_submsgs[6]
   &google_protobuf_SourceCodeInfo_msginit,
 };
 
-static const upb_msglayout_field google_protobuf_FileDescriptorProto__fields[12] = {
+const upb_msglayout_field google_protobuf_FileDescriptorProto__fields[12] = {
   {1, UPB_SIZE(4, 8), 1, 0, 12, 1},
   {2, UPB_SIZE(12, 24), 2, 0, 12, 1},
   {3, UPB_SIZE(36, 72), 0, 0, 12, 3},
@@ -84,47 +118,81 @@ static const upb_msglayout_field google_protobuf_FileDescriptorProto__fields[12]
   {12, UPB_SIZE(20, 40), 3, 0, 12, 1},
 };
 
-const upb_msglayout google_protobuf_FileDescriptorProto_msginit = {
-  {
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&upb_pss_1bt, UPB_SIZE(1125899906973706, 2251799813816330)},
-    {&upb_pss_1bt, UPB_SIZE(3377699720790034, 6755399441317906)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&upb_prm_1bt_max128b, UPB_SIZE(11258999068426274, 22517998136852514)},
-    {&upb_prm_1bt_max128b, UPB_SIZE(12384898975334442, 24769797950603306)},
-    {&upb_prm_1bt_max64b, UPB_SIZE(13510798882373682, 27021597764485170)},
-    {&upb_prm_1bt_max128b, UPB_SIZE(14636698789085242, 29273397578039354)},
-    {&upb_psm_1bt_max256b, UPB_SIZE(7881385247440962, 15762684595339330)},
-    {&upb_psm_1bt_max64b, UPB_SIZE(9007289449381962, 18014488704122954)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&upb_pss_1bt, UPB_SIZE(5629499534737506, 11258999068950626)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-  },
-  &google_protobuf_FileDescriptorProto_submsgs[0],
-  &google_protobuf_FileDescriptorProto__fields[0],
-  UPB_SIZE(64, 128), 12, false,
-};
+__asm__(
+".p2align 3\n\t"
+".globl google_protobuf_FileDescriptorProto_msginit\ngoogle_protobuf_FileDescriptorProto_msginit:\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad upb_pss_1bt\n\t"
+".quad 2251799813816330\n\t"
+".quad upb_pss_1bt\n\t"
+".quad 6755399441317906\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad upb_prm_1bt_max128b\n\t"
+".quad 22517998136852514\n\t"
+".quad upb_prm_1bt_max128b\n\t"
+".quad 24769797950603306\n\t"
+".quad upb_prm_1bt_max64b\n\t"
+".quad 27021597764485170\n\t"
+".quad upb_prm_1bt_max128b\n\t"
+".quad 29273397578039354\n\t"
+".quad upb_psm_1bt_max256b\n\t"
+".quad 15762684595339330\n\t"
+".quad upb_psm_1bt_max64b\n\t"
+".quad 18014488704122954\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad upb_pss_1bt\n\t"
+".quad 11258999068950626\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad google_protobuf_FileDescriptorProto_submsgs\n\t"
+".quad google_protobuf_FileDescriptorProto__fields\n\t"
+".short 128\n\t"
+".short 12\n\t"
+".byte 0\n\t"
+);
 
-static const upb_msglayout *const google_protobuf_DescriptorProto_submsgs[7] = {
+const upb_msglayout *const google_protobuf_DescriptorProto_submsgs[7] = {
   &google_protobuf_DescriptorProto_msginit,
   &google_protobuf_DescriptorProto_ExtensionRange_msginit,
   &google_protobuf_DescriptorProto_ReservedRange_msginit,
@@ -134,7 +202,7 @@ static const upb_msglayout *const google_protobuf_DescriptorProto_submsgs[7] = {
   &google_protobuf_OneofDescriptorProto_msginit,
 };
 
-static const upb_msglayout_field google_protobuf_DescriptorProto__fields[10] = {
+const upb_msglayout_field google_protobuf_DescriptorProto__fields[10] = {
   {1, UPB_SIZE(4, 8), 1, 0, 12, 1},
   {2, UPB_SIZE(16, 32), 0, 4, 11, 3},
   {3, UPB_SIZE(20, 40), 0, 0, 11, 3},
@@ -147,194 +215,330 @@ static const upb_msglayout_field google_protobuf_DescriptorProto__fields[10] = {
   {10, UPB_SIZE(44, 88), 0, 0, 12, 3},
 };
 
-const upb_msglayout google_protobuf_DescriptorProto_msginit = {
-  {
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&upb_pss_1bt, UPB_SIZE(1125899906973706, 2251799813816330)},
-    {&upb_prm_1bt_max128b, UPB_SIZE(4503599627632658, 9007199255003154)},
-    {&upb_prm_1bt_max128b, UPB_SIZE(5629499534213146, 11258999068426266)},
-    {&upb_prm_1bt_max128b, UPB_SIZE(6755399441252386, 13510798882308130)},
-    {&upb_prm_1bt_max64b, UPB_SIZE(7881299347963946, 15762598695862314)},
-    {&upb_prm_1bt_max128b, UPB_SIZE(9007199255003186, 18014398509744178)},
-    {&upb_psm_1bt_max64b, UPB_SIZE(3377777030266938, 6755476750794810)},
-    {&upb_prm_1bt_max64b, UPB_SIZE(10133099161976898, 20266198323560514)},
-    {&upb_prm_1bt_max64b, UPB_SIZE(11258999068557386, 22517998136983626)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-  },
-  &google_protobuf_DescriptorProto_submsgs[0],
-  &google_protobuf_DescriptorProto__fields[0],
-  UPB_SIZE(48, 96), 10, false,
-};
+__asm__(
+".p2align 3\n\t"
+".globl google_protobuf_DescriptorProto_msginit\ngoogle_protobuf_DescriptorProto_msginit:\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad upb_pss_1bt\n\t"
+".quad 2251799813816330\n\t"
+".quad upb_prm_1bt_max128b\n\t"
+".quad 9007199255003154\n\t"
+".quad upb_prm_1bt_max128b\n\t"
+".quad 11258999068426266\n\t"
+".quad upb_prm_1bt_max128b\n\t"
+".quad 13510798882308130\n\t"
+".quad upb_prm_1bt_max64b\n\t"
+".quad 15762598695862314\n\t"
+".quad upb_prm_1bt_max128b\n\t"
+".quad 18014398509744178\n\t"
+".quad upb_psm_1bt_max64b\n\t"
+".quad 6755476750794810\n\t"
+".quad upb_prm_1bt_max64b\n\t"
+".quad 20266198323560514\n\t"
+".quad upb_prm_1bt_max64b\n\t"
+".quad 22517998136983626\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad google_protobuf_DescriptorProto_submsgs\n\t"
+".quad google_protobuf_DescriptorProto__fields\n\t"
+".short 96\n\t"
+".short 10\n\t"
+".byte 0\n\t"
+);
 
-static const upb_msglayout *const google_protobuf_DescriptorProto_ExtensionRange_submsgs[1] = {
+const upb_msglayout *const google_protobuf_DescriptorProto_ExtensionRange_submsgs[1] = {
   &google_protobuf_ExtensionRangeOptions_msginit,
 };
 
-static const upb_msglayout_field google_protobuf_DescriptorProto_ExtensionRange__fields[3] = {
+const upb_msglayout_field google_protobuf_DescriptorProto_ExtensionRange__fields[3] = {
   {1, UPB_SIZE(4, 4), 1, 0, 5, 1},
   {2, UPB_SIZE(8, 8), 2, 0, 5, 1},
   {3, UPB_SIZE(12, 16), 3, 0, 11, 1},
 };
 
-const upb_msglayout google_protobuf_DescriptorProto_ExtensionRange_msginit = {
-  {
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&upb_psv4_1bt, UPB_SIZE(1125899906973704, 1125899906973704)},
-    {&upb_psv4_1bt, UPB_SIZE(2251799813947408, 2251799813947408)},
-    {&upb_psm_1bt_max64b, UPB_SIZE(3377781324906522, 4503681231749146)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-  },
-  &google_protobuf_DescriptorProto_ExtensionRange_submsgs[0],
-  &google_protobuf_DescriptorProto_ExtensionRange__fields[0],
-  UPB_SIZE(16, 24), 3, false,
-};
+__asm__(
+".p2align 3\n\t"
+".globl google_protobuf_DescriptorProto_ExtensionRange_msginit\ngoogle_protobuf_DescriptorProto_ExtensionRange_msginit:\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad upb_psv4_1bt\n\t"
+".quad 1125899906973704\n\t"
+".quad upb_psv4_1bt\n\t"
+".quad 2251799813947408\n\t"
+".quad upb_psm_1bt_max64b\n\t"
+".quad 4503681231749146\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad google_protobuf_DescriptorProto_ExtensionRange_submsgs\n\t"
+".quad google_protobuf_DescriptorProto_ExtensionRange__fields\n\t"
+".short 24\n\t"
+".short 3\n\t"
+".byte 0\n\t"
+);
 
-static const upb_msglayout_field google_protobuf_DescriptorProto_ReservedRange__fields[2] = {
+const upb_msglayout_field google_protobuf_DescriptorProto_ReservedRange__fields[2] = {
   {1, UPB_SIZE(4, 4), 1, 0, 5, 1},
   {2, UPB_SIZE(8, 8), 2, 0, 5, 1},
 };
 
-const upb_msglayout google_protobuf_DescriptorProto_ReservedRange_msginit = {
-  {
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&upb_psv4_1bt, UPB_SIZE(1125899906973704, 1125899906973704)},
-    {&upb_psv4_1bt, UPB_SIZE(2251799813947408, 2251799813947408)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-  },
-  NULL,
-  &google_protobuf_DescriptorProto_ReservedRange__fields[0],
-  UPB_SIZE(16, 16), 2, false,
-};
+__asm__(
+".p2align 3\n\t"
+".globl google_protobuf_DescriptorProto_ReservedRange_msginit\ngoogle_protobuf_DescriptorProto_ReservedRange_msginit:\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad upb_psv4_1bt\n\t"
+".quad 1125899906973704\n\t"
+".quad upb_psv4_1bt\n\t"
+".quad 2251799813947408\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad 0\n\t"
+".quad google_protobuf_DescriptorProto_ReservedRange__fields\n\t"
+".short 16\n\t"
+".short 2\n\t"
+".byte 0\n\t"
+);
 
-static const upb_msglayout *const google_protobuf_ExtensionRangeOptions_submsgs[1] = {
+const upb_msglayout *const google_protobuf_ExtensionRangeOptions_submsgs[1] = {
   &google_protobuf_UninterpretedOption_msginit,
 };
 
-static const upb_msglayout_field google_protobuf_ExtensionRangeOptions__fields[1] = {
+const upb_msglayout_field google_protobuf_ExtensionRangeOptions__fields[1] = {
   {999, UPB_SIZE(0, 0), 0, 0, 11, 3},
 };
 
-const upb_msglayout google_protobuf_ExtensionRangeOptions_msginit = {
-  {
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-  },
-  &google_protobuf_ExtensionRangeOptions_submsgs[0],
-  &google_protobuf_ExtensionRangeOptions__fields[0],
-  UPB_SIZE(8, 8), 1, false,
-};
+__asm__(
+".p2align 3\n\t"
+".globl google_protobuf_ExtensionRangeOptions_msginit\ngoogle_protobuf_ExtensionRangeOptions_msginit:\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad google_protobuf_ExtensionRangeOptions_submsgs\n\t"
+".quad google_protobuf_ExtensionRangeOptions__fields\n\t"
+".short 8\n\t"
+".short 1\n\t"
+".byte 0\n\t"
+);
 
-static const upb_msglayout *const google_protobuf_FieldDescriptorProto_submsgs[1] = {
+const upb_msglayout *const google_protobuf_FieldDescriptorProto_submsgs[1] = {
   &google_protobuf_FieldOptions_msginit,
 };
 
-static const upb_msglayout_field google_protobuf_FieldDescriptorProto__fields[11] = {
+const upb_msglayout_field google_protobuf_FieldDescriptorProto__fields[11] = {
   {1, UPB_SIZE(24, 24), 6, 0, 12, 1},
   {2, UPB_SIZE(32, 40), 7, 0, 12, 1},
   {3, UPB_SIZE(12, 12), 3, 0, 5, 1},
@@ -348,102 +552,170 @@ static const upb_msglayout_field google_protobuf_FieldDescriptorProto__fields[11
   {17, UPB_SIZE(20, 20), 5, 0, 8, 1},
 };
 
-const upb_msglayout google_protobuf_FieldDescriptorProto_msginit = {
-  {
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&upb_pss_1bt, UPB_SIZE(6755399445250058, 6755399445250058)},
-    {&upb_pss_1bt, UPB_SIZE(9007199263129618, 11258999076814866)},
-    {&upb_psv4_1bt, UPB_SIZE(3377699721052184, 3377699721052184)},
-    {&upb_psv4_1bt, UPB_SIZE(1125899906973728, 1125899906973728)},
-    {&upb_psv4_1bt, UPB_SIZE(2251799813947432, 2251799813947432)},
-    {&upb_pss_1bt, UPB_SIZE(11258999085203506, 15762598712574002)},
-    {&upb_pss_1bt, UPB_SIZE(13510798915665978, 20266198356721722)},
-    {&upb_psm_1bt_max64b, UPB_SIZE(18014514473599042, 29273513542025282)},
-    {&upb_psv4_1bt, UPB_SIZE(4503599628419144, 4503599628419144)},
-    {&upb_pss_1bt, UPB_SIZE(15762598762905682, 24769798017646674)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&upb_psb1_2bt, UPB_SIZE(5629499536310664, 5629499536310664)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-  },
-  &google_protobuf_FieldDescriptorProto_submsgs[0],
-  &google_protobuf_FieldDescriptorProto__fields[0],
-  UPB_SIZE(72, 112), 11, false,
-};
+__asm__(
+".p2align 3\n\t"
+".globl google_protobuf_FieldDescriptorProto_msginit\ngoogle_protobuf_FieldDescriptorProto_msginit:\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad upb_pss_1bt\n\t"
+".quad 6755399445250058\n\t"
+".quad upb_pss_1bt\n\t"
+".quad 11258999076814866\n\t"
+".quad upb_psv4_1bt\n\t"
+".quad 3377699721052184\n\t"
+".quad upb_psv4_1bt\n\t"
+".quad 1125899906973728\n\t"
+".quad upb_psv4_1bt\n\t"
+".quad 2251799813947432\n\t"
+".quad upb_pss_1bt\n\t"
+".quad 15762598712574002\n\t"
+".quad upb_pss_1bt\n\t"
+".quad 20266198356721722\n\t"
+".quad upb_psm_1bt_max64b\n\t"
+".quad 29273513542025282\n\t"
+".quad upb_psv4_1bt\n\t"
+".quad 4503599628419144\n\t"
+".quad upb_pss_1bt\n\t"
+".quad 24769798017646674\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad upb_psb1_2bt\n\t"
+".quad 5629499536310664\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad google_protobuf_FieldDescriptorProto_submsgs\n\t"
+".quad google_protobuf_FieldDescriptorProto__fields\n\t"
+".short 112\n\t"
+".short 11\n\t"
+".byte 0\n\t"
+);
 
-static const upb_msglayout *const google_protobuf_OneofDescriptorProto_submsgs[1] = {
+const upb_msglayout *const google_protobuf_OneofDescriptorProto_submsgs[1] = {
   &google_protobuf_OneofOptions_msginit,
 };
 
-static const upb_msglayout_field google_protobuf_OneofDescriptorProto__fields[2] = {
+const upb_msglayout_field google_protobuf_OneofDescriptorProto__fields[2] = {
   {1, UPB_SIZE(4, 8), 1, 0, 12, 1},
   {2, UPB_SIZE(12, 24), 2, 0, 11, 1},
 };
 
-const upb_msglayout google_protobuf_OneofDescriptorProto_msginit = {
-  {
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&upb_pss_1bt, UPB_SIZE(1125899906973706, 2251799813816330)},
-    {&upb_psm_1bt_max64b, UPB_SIZE(3377777029939218, 6755476750467090)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-  },
-  &google_protobuf_OneofDescriptorProto_submsgs[0],
-  &google_protobuf_OneofDescriptorProto__fields[0],
-  UPB_SIZE(16, 32), 2, false,
-};
+__asm__(
+".p2align 3\n\t"
+".globl google_protobuf_OneofDescriptorProto_msginit\ngoogle_protobuf_OneofDescriptorProto_msginit:\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad upb_pss_1bt\n\t"
+".quad 2251799813816330\n\t"
+".quad upb_psm_1bt_max64b\n\t"
+".quad 6755476750467090\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad google_protobuf_OneofDescriptorProto_submsgs\n\t"
+".quad google_protobuf_OneofDescriptorProto__fields\n\t"
+".short 32\n\t"
+".short 2\n\t"
+".byte 0\n\t"
+);
 
-static const upb_msglayout *const google_protobuf_EnumDescriptorProto_submsgs[3] = {
+const upb_msglayout *const google_protobuf_EnumDescriptorProto_submsgs[3] = {
   &google_protobuf_EnumDescriptorProto_EnumReservedRange_msginit,
   &google_protobuf_EnumOptions_msginit,
   &google_protobuf_EnumValueDescriptorProto_msginit,
 };
 
-static const upb_msglayout_field google_protobuf_EnumDescriptorProto__fields[5] = {
+const upb_msglayout_field google_protobuf_EnumDescriptorProto__fields[5] = {
   {1, UPB_SIZE(4, 8), 1, 0, 12, 1},
   {2, UPB_SIZE(16, 32), 0, 2, 11, 3},
   {3, UPB_SIZE(12, 24), 2, 1, 11, 1},
@@ -451,197 +723,333 @@ static const upb_msglayout_field google_protobuf_EnumDescriptorProto__fields[5] 
   {5, UPB_SIZE(24, 48), 0, 0, 12, 3},
 };
 
-const upb_msglayout google_protobuf_EnumDescriptorProto_msginit = {
-  {
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&upb_pss_1bt, UPB_SIZE(1125899906973706, 2251799813816330)},
-    {&upb_prm_1bt_max64b, UPB_SIZE(4503599627501586, 9007199254872082)},
-    {&upb_psm_1bt_max64b, UPB_SIZE(3377777030004762, 6755476750532634)},
-    {&upb_prm_1bt_max64b, UPB_SIZE(5629499534213154, 11258999068426274)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-  },
-  &google_protobuf_EnumDescriptorProto_submsgs[0],
-  &google_protobuf_EnumDescriptorProto__fields[0],
-  UPB_SIZE(32, 64), 5, false,
-};
+__asm__(
+".p2align 3\n\t"
+".globl google_protobuf_EnumDescriptorProto_msginit\ngoogle_protobuf_EnumDescriptorProto_msginit:\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad upb_pss_1bt\n\t"
+".quad 2251799813816330\n\t"
+".quad upb_prm_1bt_max64b\n\t"
+".quad 9007199254872082\n\t"
+".quad upb_psm_1bt_max64b\n\t"
+".quad 6755476750532634\n\t"
+".quad upb_prm_1bt_max64b\n\t"
+".quad 11258999068426274\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad google_protobuf_EnumDescriptorProto_submsgs\n\t"
+".quad google_protobuf_EnumDescriptorProto__fields\n\t"
+".short 64\n\t"
+".short 5\n\t"
+".byte 0\n\t"
+);
 
-static const upb_msglayout_field google_protobuf_EnumDescriptorProto_EnumReservedRange__fields[2] = {
+const upb_msglayout_field google_protobuf_EnumDescriptorProto_EnumReservedRange__fields[2] = {
   {1, UPB_SIZE(4, 4), 1, 0, 5, 1},
   {2, UPB_SIZE(8, 8), 2, 0, 5, 1},
 };
 
-const upb_msglayout google_protobuf_EnumDescriptorProto_EnumReservedRange_msginit = {
-  {
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&upb_psv4_1bt, UPB_SIZE(1125899906973704, 1125899906973704)},
-    {&upb_psv4_1bt, UPB_SIZE(2251799813947408, 2251799813947408)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-  },
-  NULL,
-  &google_protobuf_EnumDescriptorProto_EnumReservedRange__fields[0],
-  UPB_SIZE(16, 16), 2, false,
-};
+__asm__(
+".p2align 3\n\t"
+".globl google_protobuf_EnumDescriptorProto_EnumReservedRange_msginit\ngoogle_protobuf_EnumDescriptorProto_EnumReservedRange_msginit:\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad upb_psv4_1bt\n\t"
+".quad 1125899906973704\n\t"
+".quad upb_psv4_1bt\n\t"
+".quad 2251799813947408\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad 0\n\t"
+".quad google_protobuf_EnumDescriptorProto_EnumReservedRange__fields\n\t"
+".short 16\n\t"
+".short 2\n\t"
+".byte 0\n\t"
+);
 
-static const upb_msglayout *const google_protobuf_EnumValueDescriptorProto_submsgs[1] = {
+const upb_msglayout *const google_protobuf_EnumValueDescriptorProto_submsgs[1] = {
   &google_protobuf_EnumValueOptions_msginit,
 };
 
-static const upb_msglayout_field google_protobuf_EnumValueDescriptorProto__fields[3] = {
+const upb_msglayout_field google_protobuf_EnumValueDescriptorProto__fields[3] = {
   {1, UPB_SIZE(8, 8), 2, 0, 12, 1},
   {2, UPB_SIZE(4, 4), 1, 0, 5, 1},
   {3, UPB_SIZE(16, 24), 3, 0, 11, 1},
 };
 
-const upb_msglayout google_protobuf_EnumValueDescriptorProto_msginit = {
-  {
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&upb_pss_1bt, UPB_SIZE(2251799813947402, 2251799813947402)},
-    {&upb_psv4_1bt, UPB_SIZE(1125899906973712, 1125899906973712)},
-    {&upb_psm_1bt_max64b, UPB_SIZE(4503681231749146, 6755481045434394)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-  },
-  &google_protobuf_EnumValueDescriptorProto_submsgs[0],
-  &google_protobuf_EnumValueDescriptorProto__fields[0],
-  UPB_SIZE(24, 32), 3, false,
-};
+__asm__(
+".p2align 3\n\t"
+".globl google_protobuf_EnumValueDescriptorProto_msginit\ngoogle_protobuf_EnumValueDescriptorProto_msginit:\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad upb_pss_1bt\n\t"
+".quad 2251799813947402\n\t"
+".quad upb_psv4_1bt\n\t"
+".quad 1125899906973712\n\t"
+".quad upb_psm_1bt_max64b\n\t"
+".quad 6755481045434394\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad google_protobuf_EnumValueDescriptorProto_submsgs\n\t"
+".quad google_protobuf_EnumValueDescriptorProto__fields\n\t"
+".short 32\n\t"
+".short 3\n\t"
+".byte 0\n\t"
+);
 
-static const upb_msglayout *const google_protobuf_ServiceDescriptorProto_submsgs[2] = {
+const upb_msglayout *const google_protobuf_ServiceDescriptorProto_submsgs[2] = {
   &google_protobuf_MethodDescriptorProto_msginit,
   &google_protobuf_ServiceOptions_msginit,
 };
 
-static const upb_msglayout_field google_protobuf_ServiceDescriptorProto__fields[3] = {
+const upb_msglayout_field google_protobuf_ServiceDescriptorProto__fields[3] = {
   {1, UPB_SIZE(4, 8), 1, 0, 12, 1},
   {2, UPB_SIZE(16, 32), 0, 0, 11, 3},
   {3, UPB_SIZE(12, 24), 2, 1, 11, 1},
 };
 
-const upb_msglayout google_protobuf_ServiceDescriptorProto_msginit = {
-  {
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&upb_pss_1bt, UPB_SIZE(1125899906973706, 2251799813816330)},
-    {&upb_prm_1bt_max128b, UPB_SIZE(4503599627370514, 9007199254741010)},
-    {&upb_psm_1bt_max64b, UPB_SIZE(3377777030004762, 6755476750532634)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-  },
-  &google_protobuf_ServiceDescriptorProto_submsgs[0],
-  &google_protobuf_ServiceDescriptorProto__fields[0],
-  UPB_SIZE(24, 48), 3, false,
-};
+__asm__(
+".p2align 3\n\t"
+".globl google_protobuf_ServiceDescriptorProto_msginit\ngoogle_protobuf_ServiceDescriptorProto_msginit:\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad upb_pss_1bt\n\t"
+".quad 2251799813816330\n\t"
+".quad upb_prm_1bt_max128b\n\t"
+".quad 9007199254741010\n\t"
+".quad upb_psm_1bt_max64b\n\t"
+".quad 6755476750532634\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad google_protobuf_ServiceDescriptorProto_submsgs\n\t"
+".quad google_protobuf_ServiceDescriptorProto__fields\n\t"
+".short 48\n\t"
+".short 3\n\t"
+".byte 0\n\t"
+);
 
-static const upb_msglayout *const google_protobuf_MethodDescriptorProto_submsgs[1] = {
+const upb_msglayout *const google_protobuf_MethodDescriptorProto_submsgs[1] = {
   &google_protobuf_MethodOptions_msginit,
 };
 
-static const upb_msglayout_field google_protobuf_MethodDescriptorProto__fields[6] = {
+const upb_msglayout_field google_protobuf_MethodDescriptorProto__fields[6] = {
   {1, UPB_SIZE(4, 8), 3, 0, 12, 1},
   {2, UPB_SIZE(12, 24), 4, 0, 12, 1},
   {3, UPB_SIZE(20, 40), 5, 0, 12, 1},
@@ -650,51 +1058,85 @@ static const upb_msglayout_field google_protobuf_MethodDescriptorProto__fields[6
   {6, UPB_SIZE(2, 2), 2, 0, 8, 1},
 };
 
-const upb_msglayout google_protobuf_MethodDescriptorProto_msginit = {
-  {
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&upb_pss_1bt, UPB_SIZE(1125899907366922, 2251799814209546)},
-    {&upb_pss_1bt, UPB_SIZE(3377699721576466, 6755399442104338)},
-    {&upb_pss_1bt, UPB_SIZE(5629499536310298, 11258999070523418)},
-    {&upb_psm_1bt_max64b, UPB_SIZE(7881393837178914, 15762693185077282)},
-    {&upb_psb1_1bt, UPB_SIZE(281474976841768, 281474976841768)},
-    {&upb_psb1_1bt, UPB_SIZE(562949953683504, 562949953683504)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-  },
-  &google_protobuf_MethodDescriptorProto_submsgs[0],
-  &google_protobuf_MethodDescriptorProto__fields[0],
-  UPB_SIZE(32, 64), 6, false,
-};
+__asm__(
+".p2align 3\n\t"
+".globl google_protobuf_MethodDescriptorProto_msginit\ngoogle_protobuf_MethodDescriptorProto_msginit:\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad upb_pss_1bt\n\t"
+".quad 2251799814209546\n\t"
+".quad upb_pss_1bt\n\t"
+".quad 6755399442104338\n\t"
+".quad upb_pss_1bt\n\t"
+".quad 11258999070523418\n\t"
+".quad upb_psm_1bt_max64b\n\t"
+".quad 15762693185077282\n\t"
+".quad upb_psb1_1bt\n\t"
+".quad 281474976841768\n\t"
+".quad upb_psb1_1bt\n\t"
+".quad 562949953683504\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad google_protobuf_MethodDescriptorProto_submsgs\n\t"
+".quad google_protobuf_MethodDescriptorProto__fields\n\t"
+".short 64\n\t"
+".short 6\n\t"
+".byte 0\n\t"
+);
 
-static const upb_msglayout *const google_protobuf_FileOptions_submsgs[1] = {
+const upb_msglayout *const google_protobuf_FileOptions_submsgs[1] = {
   &google_protobuf_UninterpretedOption_msginit,
 };
 
-static const upb_msglayout_field google_protobuf_FileOptions__fields[21] = {
+const upb_msglayout_field google_protobuf_FileOptions__fields[21] = {
   {1, UPB_SIZE(20, 24), 11, 0, 12, 1},
   {8, UPB_SIZE(28, 40), 12, 0, 12, 1},
   {9, UPB_SIZE(4, 4), 1, 0, 14, 1},
@@ -718,51 +1160,85 @@ static const upb_msglayout_field google_protobuf_FileOptions__fields[21] = {
   {999, UPB_SIZE(100, 184), 0, 0, 11, 3},
 };
 
-const upb_msglayout google_protobuf_FileOptions_msginit = {
-  {
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&upb_pss_1bt, UPB_SIZE(5629499668430858, 6755399575273482)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&upb_pss_1bt, UPB_SIZE(7881299616333890, 11258999336861762)},
-    {&upb_psv4_1bt, UPB_SIZE(1125899906973768, 1125899906973768)},
-    {&upb_psb1_1bt, UPB_SIZE(2251799813947472, 2251799813947472)},
-    {&upb_pss_1bt, UPB_SIZE(10133099698454618, 15762599232667738)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&upb_psb1_2bt, UPB_SIZE(2533274790920576, 2533274790920576)},
-    {&upb_psb1_2bt, UPB_SIZE(2814749768155528, 2814749768155528)},
-    {&upb_psb1_2bt, UPB_SIZE(3096224745914768, 3096224745914768)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&upb_psb1_2bt, UPB_SIZE(3377699724722592, 3377699724722592)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&upb_psb1_2bt, UPB_SIZE(3659174705627576, 3659174705627576)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&upb_psb1_2bt, UPB_SIZE(3940649690726872, 3940649690726872)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&upb_psb1_2bt, UPB_SIZE(4222124684214776, 4222124684214776)},
-  },
-  &google_protobuf_FileOptions_submsgs[0],
-  &google_protobuf_FileOptions__fields[0],
-  UPB_SIZE(104, 192), 21, false,
-};
+__asm__(
+".p2align 3\n\t"
+".globl google_protobuf_FileOptions_msginit\ngoogle_protobuf_FileOptions_msginit:\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad upb_pss_1bt\n\t"
+".quad 6755399575273482\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad upb_pss_1bt\n\t"
+".quad 11258999336861762\n\t"
+".quad upb_psv4_1bt\n\t"
+".quad 1125899906973768\n\t"
+".quad upb_psb1_1bt\n\t"
+".quad 2251799813947472\n\t"
+".quad upb_pss_1bt\n\t"
+".quad 15762599232667738\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad upb_psb1_2bt\n\t"
+".quad 2533274790920576\n\t"
+".quad upb_psb1_2bt\n\t"
+".quad 2814749768155528\n\t"
+".quad upb_psb1_2bt\n\t"
+".quad 3096224745914768\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad upb_psb1_2bt\n\t"
+".quad 3377699724722592\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad upb_psb1_2bt\n\t"
+".quad 3659174705627576\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad upb_psb1_2bt\n\t"
+".quad 3940649690726872\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad upb_psb1_2bt\n\t"
+".quad 4222124684214776\n\t"
+".quad google_protobuf_FileOptions_submsgs\n\t"
+".quad google_protobuf_FileOptions__fields\n\t"
+".short 192\n\t"
+".short 21\n\t"
+".byte 0\n\t"
+);
 
-static const upb_msglayout *const google_protobuf_MessageOptions_submsgs[1] = {
+const upb_msglayout *const google_protobuf_MessageOptions_submsgs[1] = {
   &google_protobuf_UninterpretedOption_msginit,
 };
 
-static const upb_msglayout_field google_protobuf_MessageOptions__fields[5] = {
+const upb_msglayout_field google_protobuf_MessageOptions__fields[5] = {
   {1, UPB_SIZE(1, 1), 1, 0, 8, 1},
   {2, UPB_SIZE(2, 2), 2, 0, 8, 1},
   {3, UPB_SIZE(3, 3), 3, 0, 8, 1},
@@ -770,51 +1246,85 @@ static const upb_msglayout_field google_protobuf_MessageOptions__fields[5] = {
   {999, UPB_SIZE(8, 8), 0, 0, 11, 3},
 };
 
-const upb_msglayout google_protobuf_MessageOptions_msginit = {
-  {
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&upb_psb1_1bt, UPB_SIZE(281474976841736, 281474976841736)},
-    {&upb_psb1_1bt, UPB_SIZE(562949953683472, 562949953683472)},
-    {&upb_psb1_1bt, UPB_SIZE(844424930656280, 844424930656280)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&upb_psb1_1bt, UPB_SIZE(1125899907891256, 1125899907891256)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-  },
-  &google_protobuf_MessageOptions_submsgs[0],
-  &google_protobuf_MessageOptions__fields[0],
-  UPB_SIZE(16, 16), 5, false,
-};
+__asm__(
+".p2align 3\n\t"
+".globl google_protobuf_MessageOptions_msginit\ngoogle_protobuf_MessageOptions_msginit:\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad upb_psb1_1bt\n\t"
+".quad 281474976841736\n\t"
+".quad upb_psb1_1bt\n\t"
+".quad 562949953683472\n\t"
+".quad upb_psb1_1bt\n\t"
+".quad 844424930656280\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad upb_psb1_1bt\n\t"
+".quad 1125899907891256\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad google_protobuf_MessageOptions_submsgs\n\t"
+".quad google_protobuf_MessageOptions__fields\n\t"
+".short 16\n\t"
+".short 5\n\t"
+".byte 0\n\t"
+);
 
-static const upb_msglayout *const google_protobuf_FieldOptions_submsgs[1] = {
+const upb_msglayout *const google_protobuf_FieldOptions_submsgs[1] = {
   &google_protobuf_UninterpretedOption_msginit,
 };
 
-static const upb_msglayout_field google_protobuf_FieldOptions__fields[7] = {
+const upb_msglayout_field google_protobuf_FieldOptions__fields[7] = {
   {1, UPB_SIZE(4, 4), 1, 0, 14, 1},
   {2, UPB_SIZE(12, 12), 3, 0, 8, 1},
   {3, UPB_SIZE(13, 13), 4, 0, 8, 1},
@@ -824,297 +1334,501 @@ static const upb_msglayout_field google_protobuf_FieldOptions__fields[7] = {
   {999, UPB_SIZE(16, 16), 0, 0, 11, 3},
 };
 
-const upb_msglayout google_protobuf_FieldOptions_msginit = {
-  {
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&upb_psv4_1bt, UPB_SIZE(1125899906973704, 1125899906973704)},
-    {&upb_psb1_1bt, UPB_SIZE(3377699721052176, 3377699721052176)},
-    {&upb_psb1_1bt, UPB_SIZE(3659174698287128, 3659174698287128)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&upb_psb1_1bt, UPB_SIZE(3940649676046376, 3940649676046376)},
-    {&upb_psv4_1bt, UPB_SIZE(2251799813947440, 2251799813947440)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&upb_psb1_1bt, UPB_SIZE(4222124654854224, 4222124654854224)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-  },
-  &google_protobuf_FieldOptions_submsgs[0],
-  &google_protobuf_FieldOptions__fields[0],
-  UPB_SIZE(24, 24), 7, false,
-};
+__asm__(
+".p2align 3\n\t"
+".globl google_protobuf_FieldOptions_msginit\ngoogle_protobuf_FieldOptions_msginit:\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad upb_psv4_1bt\n\t"
+".quad 1125899906973704\n\t"
+".quad upb_psb1_1bt\n\t"
+".quad 3377699721052176\n\t"
+".quad upb_psb1_1bt\n\t"
+".quad 3659174698287128\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad upb_psb1_1bt\n\t"
+".quad 3940649676046376\n\t"
+".quad upb_psv4_1bt\n\t"
+".quad 2251799813947440\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad upb_psb1_1bt\n\t"
+".quad 4222124654854224\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad google_protobuf_FieldOptions_submsgs\n\t"
+".quad google_protobuf_FieldOptions__fields\n\t"
+".short 24\n\t"
+".short 7\n\t"
+".byte 0\n\t"
+);
 
-static const upb_msglayout *const google_protobuf_OneofOptions_submsgs[1] = {
+const upb_msglayout *const google_protobuf_OneofOptions_submsgs[1] = {
   &google_protobuf_UninterpretedOption_msginit,
 };
 
-static const upb_msglayout_field google_protobuf_OneofOptions__fields[1] = {
+const upb_msglayout_field google_protobuf_OneofOptions__fields[1] = {
   {999, UPB_SIZE(0, 0), 0, 0, 11, 3},
 };
 
-const upb_msglayout google_protobuf_OneofOptions_msginit = {
-  {
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-  },
-  &google_protobuf_OneofOptions_submsgs[0],
-  &google_protobuf_OneofOptions__fields[0],
-  UPB_SIZE(8, 8), 1, false,
-};
+__asm__(
+".p2align 3\n\t"
+".globl google_protobuf_OneofOptions_msginit\ngoogle_protobuf_OneofOptions_msginit:\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad google_protobuf_OneofOptions_submsgs\n\t"
+".quad google_protobuf_OneofOptions__fields\n\t"
+".short 8\n\t"
+".short 1\n\t"
+".byte 0\n\t"
+);
 
-static const upb_msglayout *const google_protobuf_EnumOptions_submsgs[1] = {
+const upb_msglayout *const google_protobuf_EnumOptions_submsgs[1] = {
   &google_protobuf_UninterpretedOption_msginit,
 };
 
-static const upb_msglayout_field google_protobuf_EnumOptions__fields[3] = {
+const upb_msglayout_field google_protobuf_EnumOptions__fields[3] = {
   {2, UPB_SIZE(1, 1), 1, 0, 8, 1},
   {3, UPB_SIZE(2, 2), 2, 0, 8, 1},
   {999, UPB_SIZE(4, 8), 0, 0, 11, 3},
 };
 
-const upb_msglayout google_protobuf_EnumOptions_msginit = {
-  {
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&upb_psb1_1bt, UPB_SIZE(281474976841744, 281474976841744)},
-    {&upb_psb1_1bt, UPB_SIZE(562949953683480, 562949953683480)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-  },
-  &google_protobuf_EnumOptions_submsgs[0],
-  &google_protobuf_EnumOptions__fields[0],
-  UPB_SIZE(8, 16), 3, false,
-};
+__asm__(
+".p2align 3\n\t"
+".globl google_protobuf_EnumOptions_msginit\ngoogle_protobuf_EnumOptions_msginit:\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad upb_psb1_1bt\n\t"
+".quad 281474976841744\n\t"
+".quad upb_psb1_1bt\n\t"
+".quad 562949953683480\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad google_protobuf_EnumOptions_submsgs\n\t"
+".quad google_protobuf_EnumOptions__fields\n\t"
+".short 16\n\t"
+".short 3\n\t"
+".byte 0\n\t"
+);
 
-static const upb_msglayout *const google_protobuf_EnumValueOptions_submsgs[1] = {
+const upb_msglayout *const google_protobuf_EnumValueOptions_submsgs[1] = {
   &google_protobuf_UninterpretedOption_msginit,
 };
 
-static const upb_msglayout_field google_protobuf_EnumValueOptions__fields[2] = {
+const upb_msglayout_field google_protobuf_EnumValueOptions__fields[2] = {
   {1, UPB_SIZE(1, 1), 1, 0, 8, 1},
   {999, UPB_SIZE(4, 8), 0, 0, 11, 3},
 };
 
-const upb_msglayout google_protobuf_EnumValueOptions_msginit = {
-  {
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&upb_psb1_1bt, UPB_SIZE(281474976841736, 281474976841736)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-  },
-  &google_protobuf_EnumValueOptions_submsgs[0],
-  &google_protobuf_EnumValueOptions__fields[0],
-  UPB_SIZE(8, 16), 2, false,
-};
+__asm__(
+".p2align 3\n\t"
+".globl google_protobuf_EnumValueOptions_msginit\ngoogle_protobuf_EnumValueOptions_msginit:\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad upb_psb1_1bt\n\t"
+".quad 281474976841736\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad google_protobuf_EnumValueOptions_submsgs\n\t"
+".quad google_protobuf_EnumValueOptions__fields\n\t"
+".short 16\n\t"
+".short 2\n\t"
+".byte 0\n\t"
+);
 
-static const upb_msglayout *const google_protobuf_ServiceOptions_submsgs[1] = {
+const upb_msglayout *const google_protobuf_ServiceOptions_submsgs[1] = {
   &google_protobuf_UninterpretedOption_msginit,
 };
 
-static const upb_msglayout_field google_protobuf_ServiceOptions__fields[2] = {
+const upb_msglayout_field google_protobuf_ServiceOptions__fields[2] = {
   {33, UPB_SIZE(1, 1), 1, 0, 8, 1},
   {999, UPB_SIZE(4, 8), 0, 0, 11, 3},
 };
 
-const upb_msglayout google_protobuf_ServiceOptions_msginit = {
-  {
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-  },
-  &google_protobuf_ServiceOptions_submsgs[0],
-  &google_protobuf_ServiceOptions__fields[0],
-  UPB_SIZE(8, 16), 2, false,
-};
+__asm__(
+".p2align 3\n\t"
+".globl google_protobuf_ServiceOptions_msginit\ngoogle_protobuf_ServiceOptions_msginit:\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad google_protobuf_ServiceOptions_submsgs\n\t"
+".quad google_protobuf_ServiceOptions__fields\n\t"
+".short 16\n\t"
+".short 2\n\t"
+".byte 0\n\t"
+);
 
-static const upb_msglayout *const google_protobuf_MethodOptions_submsgs[1] = {
+const upb_msglayout *const google_protobuf_MethodOptions_submsgs[1] = {
   &google_protobuf_UninterpretedOption_msginit,
 };
 
-static const upb_msglayout_field google_protobuf_MethodOptions__fields[3] = {
+const upb_msglayout_field google_protobuf_MethodOptions__fields[3] = {
   {33, UPB_SIZE(8, 8), 2, 0, 8, 1},
   {34, UPB_SIZE(4, 4), 1, 0, 14, 1},
   {999, UPB_SIZE(12, 16), 0, 0, 11, 3},
 };
 
-const upb_msglayout google_protobuf_MethodOptions_msginit = {
-  {
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-  },
-  &google_protobuf_MethodOptions_submsgs[0],
-  &google_protobuf_MethodOptions__fields[0],
-  UPB_SIZE(16, 24), 3, false,
-};
+__asm__(
+".p2align 3\n\t"
+".globl google_protobuf_MethodOptions_msginit\ngoogle_protobuf_MethodOptions_msginit:\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad google_protobuf_MethodOptions_submsgs\n\t"
+".quad google_protobuf_MethodOptions__fields\n\t"
+".short 24\n\t"
+".short 3\n\t"
+".byte 0\n\t"
+);
 
-static const upb_msglayout *const google_protobuf_UninterpretedOption_submsgs[1] = {
+const upb_msglayout *const google_protobuf_UninterpretedOption_submsgs[1] = {
   &google_protobuf_UninterpretedOption_NamePart_msginit,
 };
 
-static const upb_msglayout_field google_protobuf_UninterpretedOption__fields[7] = {
+const upb_msglayout_field google_protobuf_UninterpretedOption__fields[7] = {
   {2, UPB_SIZE(56, 80), 0, 0, 11, 3},
   {3, UPB_SIZE(32, 32), 4, 0, 12, 1},
   {4, UPB_SIZE(8, 8), 1, 0, 4, 1},
@@ -1124,140 +1838,242 @@ static const upb_msglayout_field google_protobuf_UninterpretedOption__fields[7] 
   {8, UPB_SIZE(48, 64), 6, 0, 12, 1},
 };
 
-const upb_msglayout google_protobuf_UninterpretedOption_msginit = {
-  {
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&upb_prm_1bt_max64b, UPB_SIZE(15762598695796754, 22517998136852498)},
-    {&upb_pss_1bt, UPB_SIZE(9007199255789594, 9007199255789594)},
-    {&upb_psv8_1bt, UPB_SIZE(2251799813816352, 2251799813816352)},
-    {&upb_psv8_1bt, UPB_SIZE(4503599627632680, 4503599627632680)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&upb_pss_1bt, UPB_SIZE(11258999070523450, 13510798884208698)},
-    {&upb_pss_1bt, UPB_SIZE(13510798886305858, 18014398513676354)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-  },
-  &google_protobuf_UninterpretedOption_submsgs[0],
-  &google_protobuf_UninterpretedOption__fields[0],
-  UPB_SIZE(64, 96), 7, false,
-};
+__asm__(
+".p2align 3\n\t"
+".globl google_protobuf_UninterpretedOption_msginit\ngoogle_protobuf_UninterpretedOption_msginit:\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad upb_prm_1bt_max64b\n\t"
+".quad 22517998136852498\n\t"
+".quad upb_pss_1bt\n\t"
+".quad 9007199255789594\n\t"
+".quad upb_psv8_1bt\n\t"
+".quad 2251799813816352\n\t"
+".quad upb_psv8_1bt\n\t"
+".quad 4503599627632680\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad upb_pss_1bt\n\t"
+".quad 13510798884208698\n\t"
+".quad upb_pss_1bt\n\t"
+".quad 18014398513676354\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad google_protobuf_UninterpretedOption_submsgs\n\t"
+".quad google_protobuf_UninterpretedOption__fields\n\t"
+".short 96\n\t"
+".short 7\n\t"
+".byte 0\n\t"
+);
 
-static const upb_msglayout_field google_protobuf_UninterpretedOption_NamePart__fields[2] = {
+const upb_msglayout_field google_protobuf_UninterpretedOption_NamePart__fields[2] = {
   {1, UPB_SIZE(4, 8), 2, 0, 12, 2},
   {2, UPB_SIZE(1, 1), 1, 0, 8, 2},
 };
 
-const upb_msglayout google_protobuf_UninterpretedOption_NamePart_msginit = {
-  {
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&upb_pss_1bt, UPB_SIZE(1125899907104778, 2251799813947402)},
-    {&upb_psb1_1bt, UPB_SIZE(281474976841744, 281474976841744)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-  },
-  NULL,
-  &google_protobuf_UninterpretedOption_NamePart__fields[0],
-  UPB_SIZE(16, 32), 2, false,
-};
+__asm__(
+".p2align 3\n\t"
+".globl google_protobuf_UninterpretedOption_NamePart_msginit\ngoogle_protobuf_UninterpretedOption_NamePart_msginit:\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad upb_pss_1bt\n\t"
+".quad 2251799813947402\n\t"
+".quad upb_psb1_1bt\n\t"
+".quad 281474976841744\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad 0\n\t"
+".quad google_protobuf_UninterpretedOption_NamePart__fields\n\t"
+".short 32\n\t"
+".short 2\n\t"
+".byte 0\n\t"
+);
 
-static const upb_msglayout *const google_protobuf_SourceCodeInfo_submsgs[1] = {
+const upb_msglayout *const google_protobuf_SourceCodeInfo_submsgs[1] = {
   &google_protobuf_SourceCodeInfo_Location_msginit,
 };
 
-static const upb_msglayout_field google_protobuf_SourceCodeInfo__fields[1] = {
+const upb_msglayout_field google_protobuf_SourceCodeInfo__fields[1] = {
   {1, UPB_SIZE(0, 0), 0, 0, 11, 3},
 };
 
-const upb_msglayout google_protobuf_SourceCodeInfo_msginit = {
-  {
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&upb_prm_1bt_max128b, UPB_SIZE(10, 10)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-  },
-  &google_protobuf_SourceCodeInfo_submsgs[0],
-  &google_protobuf_SourceCodeInfo__fields[0],
-  UPB_SIZE(8, 8), 1, false,
-};
+__asm__(
+".p2align 3\n\t"
+".globl google_protobuf_SourceCodeInfo_msginit\ngoogle_protobuf_SourceCodeInfo_msginit:\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad upb_prm_1bt_max128b\n\t"
+".quad 10\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad google_protobuf_SourceCodeInfo_submsgs\n\t"
+".quad google_protobuf_SourceCodeInfo__fields\n\t"
+".short 8\n\t"
+".short 1\n\t"
+".byte 0\n\t"
+);
 
-static const upb_msglayout_field google_protobuf_SourceCodeInfo_Location__fields[5] = {
+const upb_msglayout_field google_protobuf_SourceCodeInfo_Location__fields[5] = {
   {1, UPB_SIZE(20, 40), 0, 0, 5, _UPB_LABEL_PACKED},
   {2, UPB_SIZE(24, 48), 0, 0, 5, _UPB_LABEL_PACKED},
   {3, UPB_SIZE(4, 8), 1, 0, 12, 1},
@@ -1265,140 +2081,242 @@ static const upb_msglayout_field google_protobuf_SourceCodeInfo_Location__fields
   {6, UPB_SIZE(28, 56), 0, 0, 12, 3},
 };
 
-const upb_msglayout google_protobuf_SourceCodeInfo_Location_msginit = {
-  {
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&upb_pss_1bt, UPB_SIZE(1125899906973722, 2251799813816346)},
-    {&upb_pss_1bt, UPB_SIZE(3377699720790050, 6755399441317922)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-  },
-  NULL,
-  &google_protobuf_SourceCodeInfo_Location__fields[0],
-  UPB_SIZE(32, 64), 5, false,
-};
+__asm__(
+".p2align 3\n\t"
+".globl google_protobuf_SourceCodeInfo_Location_msginit\ngoogle_protobuf_SourceCodeInfo_Location_msginit:\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad upb_pss_1bt\n\t"
+".quad 2251799813816346\n\t"
+".quad upb_pss_1bt\n\t"
+".quad 6755399441317922\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad 0\n\t"
+".quad google_protobuf_SourceCodeInfo_Location__fields\n\t"
+".short 64\n\t"
+".short 5\n\t"
+".byte 0\n\t"
+);
 
-static const upb_msglayout *const google_protobuf_GeneratedCodeInfo_submsgs[1] = {
+const upb_msglayout *const google_protobuf_GeneratedCodeInfo_submsgs[1] = {
   &google_protobuf_GeneratedCodeInfo_Annotation_msginit,
 };
 
-static const upb_msglayout_field google_protobuf_GeneratedCodeInfo__fields[1] = {
+const upb_msglayout_field google_protobuf_GeneratedCodeInfo__fields[1] = {
   {1, UPB_SIZE(0, 0), 0, 0, 11, 3},
 };
 
-const upb_msglayout google_protobuf_GeneratedCodeInfo_msginit = {
-  {
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&upb_prm_1bt_max64b, UPB_SIZE(10, 10)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-  },
-  &google_protobuf_GeneratedCodeInfo_submsgs[0],
-  &google_protobuf_GeneratedCodeInfo__fields[0],
-  UPB_SIZE(8, 8), 1, false,
-};
+__asm__(
+".p2align 3\n\t"
+".globl google_protobuf_GeneratedCodeInfo_msginit\ngoogle_protobuf_GeneratedCodeInfo_msginit:\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad upb_prm_1bt_max64b\n\t"
+".quad 10\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad google_protobuf_GeneratedCodeInfo_submsgs\n\t"
+".quad google_protobuf_GeneratedCodeInfo__fields\n\t"
+".short 8\n\t"
+".short 1\n\t"
+".byte 0\n\t"
+);
 
-static const upb_msglayout_field google_protobuf_GeneratedCodeInfo_Annotation__fields[4] = {
+const upb_msglayout_field google_protobuf_GeneratedCodeInfo_Annotation__fields[4] = {
   {1, UPB_SIZE(20, 32), 0, 0, 5, _UPB_LABEL_PACKED},
   {2, UPB_SIZE(12, 16), 3, 0, 12, 1},
   {3, UPB_SIZE(4, 4), 1, 0, 5, 1},
   {4, UPB_SIZE(8, 8), 2, 0, 5, 1},
 };
 
-const upb_msglayout google_protobuf_GeneratedCodeInfo_Annotation_msginit = {
-  {
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&upb_pss_1bt, UPB_SIZE(3377699721052178, 4503599627894802)},
-    {&upb_psv4_1bt, UPB_SIZE(1125899906973720, 1125899906973720)},
-    {&upb_psv4_1bt, UPB_SIZE(2251799813947424, 2251799813947424)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-    {&fastdecode_generic, UPB_SIZE(0, 0)},
-  },
-  NULL,
-  &google_protobuf_GeneratedCodeInfo_Annotation__fields[0],
-  UPB_SIZE(24, 48), 4, false,
-};
+__asm__(
+".p2align 3\n\t"
+".globl google_protobuf_GeneratedCodeInfo_Annotation_msginit\ngoogle_protobuf_GeneratedCodeInfo_Annotation_msginit:\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad upb_pss_1bt\n\t"
+".quad 4503599627894802\n\t"
+".quad upb_psv4_1bt\n\t"
+".quad 1125899906973720\n\t"
+".quad upb_psv4_1bt\n\t"
+".quad 2251799813947424\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad fastdecode_generic\n\t"
+".quad 0\n\t"
+".quad 0\n\t"
+".quad google_protobuf_GeneratedCodeInfo_Annotation__fields\n\t"
+".short 48\n\t"
+".short 4\n\t"
+".byte 0\n\t"
+);
 
 #include "upb/port_undef.inc"
 

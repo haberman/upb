@@ -866,6 +866,18 @@ std::vector<TableEntry> FastDecodeTable(const protobuf::Descriptor* message,
   return table;
 }
 
+struct AsmWriter {
+  AsmWriter(Output& output_) : output(output_) {}
+  template <class... Arg>
+  void operator()(absl::string_view format, const Arg&... arg) {
+    std::string fmt_str(format);
+    fmt_str = "\"" + fmt_str + "\\n\\t\"\n";
+    output(fmt_str, arg...);
+  }
+
+  Output& output;
+};
+
 void WriteSource(const protobuf::FileDescriptor* file, Output& output) {
   EmitFileWarning(file, output);
 
@@ -887,8 +899,8 @@ void WriteSource(const protobuf::FileDescriptor* file, Output& output) {
 
   for (auto message : SortedMessages(file)) {
     std::string msgname = ToCIdent(message->full_name());
-    std::string fields_array_ref = "NULL";
-    std::string submsgs_array_ref = "NULL";
+    std::string fields_array_ref = "0";
+    std::string submsgs_array_ref = "0";
     MessageLayout layout(message);
     SubmsgArray submsg_array(message);
 
@@ -896,8 +908,8 @@ void WriteSource(const protobuf::FileDescriptor* file, Output& output) {
       // TODO(haberman): could save a little bit of space by only generating a
       // "submsgs" array for every strongly-connected component.
       std::string submsgs_array_name = msgname + "_submsgs";
-      submsgs_array_ref = "&" + submsgs_array_name + "[0]";
-      output("static const upb_msglayout *const $0[$1] = {\n",
+      submsgs_array_ref = submsgs_array_name;
+      output("const upb_msglayout *const $0[$1] = {\n",
              submsgs_array_name, submsg_array.submsgs().size());
 
       for (auto submsg : submsg_array.submsgs()) {
@@ -911,8 +923,8 @@ void WriteSource(const protobuf::FileDescriptor* file, Output& output) {
         FieldNumberOrder(message);
     if (!field_number_order.empty()) {
       std::string fields_array_name = msgname + "__fields";
-      fields_array_ref = "&" + fields_array_name + "[0]";
-      output("static const upb_msglayout_field $0[$1] = {\n",
+      fields_array_ref = fields_array_name;
+      output("const upb_msglayout_field $0[$1] = {\n",
              fields_array_name, field_number_order.size());
       for (auto field : field_number_order) {
         int submsg_index = 0;
@@ -960,20 +972,21 @@ void WriteSource(const protobuf::FileDescriptor* file, Output& output) {
 
     std::vector<TableEntry> table = FastDecodeTable(message, layout);
 
-    output("const upb_msglayout $0 = {\n", MessageInit(message));
-    output("  {\n");
-    for (const auto& ent : table) {
-      output("    {&$0, $1},\n", ent.first, GetSizeInit(ent.second));
-    }
-    output("  },\n");
-    output("  $0,\n", submsgs_array_ref);
-    output("  $0,\n", fields_array_ref);
-    output("  $0, $1, $2,\n", GetSizeInit(layout.message_size()),
-           field_number_order.size(),
-           "false"  // TODO: extendable
-    );
+    AsmWriter asm_out(output);
 
-    output("};\n\n");
+    output("__asm__(\n");
+    asm_out(".p2align 3");
+    asm_out(".globl $0\\n$0:", MessageInit(message));
+    for (const auto& ent : table) {
+      asm_out(".quad $0", ent.first);
+      asm_out(".quad $0", ent.second.size64);
+    }
+    asm_out(".quad $0", submsgs_array_ref);
+    asm_out(".quad $0", fields_array_ref);
+    asm_out(".short $0", layout.message_size().size64);
+    asm_out(".short $0", field_number_order.size());
+    asm_out(".byte 0");  // TODO: extendable
+    output(");\n\n");
   }
 
   output("#include \"upb/port_undef.inc\"\n");
