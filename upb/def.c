@@ -960,7 +960,7 @@ static bool make_layout(const upb_symtab *symtab, const upb_msgdef *m) {
   /* TODO(haberman): initialize fast tables so that reflection-based parsing
    * can get the same speeds as linked-in types. */
   for (i = 0; i < 32; i++) {
-    l->fasttable[i].field_parser = &fastdecode_generic;
+    /*l->fasttable[i].field_parser = &fastdecode_generic;*/
   }
 
   if (upb_msgdef_mapentry(m)) {

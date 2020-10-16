@@ -8,12 +8,14 @@
 #ifndef UPB_MSG_H_
 #define UPB_MSG_H_
 
+#include <stdalign.h>
 #include <stdint.h>
 #include <string.h>
 
 #include "upb/table.int.h"
 #include "upb/upb.h"
 
+/* Must be last. */
 #include "upb/port_def.inc"
 
 #ifdef __cplusplus
@@ -59,8 +61,12 @@ typedef struct {
   uint64_t field_data;
 } _upb_fasttable_entry;
 
+typedef struct {
+  alignas(32) char func[32];
+} _upb_trampoline;
+
 typedef struct upb_msglayout {
-  _upb_fasttable_entry fasttable[32];
+  alignas(32) _upb_trampoline trampolines[32];
   const struct upb_msglayout *const* submsgs;
   const upb_msglayout_field *fields;
   /* Must be aligned to sizeof(void*).  Doesn't include internal members like

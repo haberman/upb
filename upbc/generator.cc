@@ -975,12 +975,15 @@ void WriteSource(const protobuf::FileDescriptor* file, Output& output) {
     AsmWriter asm_out(output);
 
     output("__asm__(\n");
-    asm_out(".p2align 3");
+    asm_out(".p2align 5");
     asm_out(".globl $0\\n$0:", MessageInit(message));
     for (const auto& ent : table) {
-      asm_out(".quad $0", ent.first);
-      asm_out(".quad $0", ent.second.size64);
+      asm_out(".p2align 5");
+      asm_out("movq $$$0, %rax", ent.second.size64);
+      asm_out("xorq %rax, %r9");
+      asm_out("jmp $0", ent.first);
     }
+    asm_out(".p2align 5");
     asm_out(".quad $0", submsgs_array_ref);
     asm_out(".quad $0", fields_array_ref);
     asm_out(".short $0", layout.message_size().size64);

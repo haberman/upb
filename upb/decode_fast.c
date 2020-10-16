@@ -57,13 +57,10 @@ static const char *fastdecode_tagdispatch(upb_decstate *d, const char *ptr,
   // Get 5 bits of field number (we pretend the continuation bit is a data bit,
   // speculating that the second byte, if any, will be 0x01).
   size_t idx = (tag & 0xf8) >> 3;
+  uint32_t data = tag;
 
-  // Xor the actual tag with the expected tag (in the low bytes of the table)
-  // so that the field parser can verify the tag by comparing with zero.
-  uint64_t data = table->fasttable[idx].field_data ^ tag;
-
-  // Jump to the specialized field parser function.
-  return table->fasttable[idx].field_parser(UPB_PARSE_ARGS);
+  _upb_field_parser *parser = (_upb_field_parser*)&table->trampolines[idx];
+  return parser(UPB_PARSE_ARGS);
 }
 
 UPB_FORCEINLINE
