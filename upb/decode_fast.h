@@ -24,6 +24,7 @@
 //   - 'z8' for zig-zag-encoded 8-byte varint
 //   - 'f4' for 4-byte fixed
 //   - 'f8' for 8-byte fixed
+//   - 'g' for group
 //   - 'm' for sub-message
 //   - 's' for string (validate UTF-8)
 //   - 'b' for bytes

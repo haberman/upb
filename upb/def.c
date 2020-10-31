@@ -8,6 +8,10 @@
 #include "google/protobuf/descriptor.upb.h"
 #include "upb/decode.int.h"
 
+#if UPB_FASTTABLE
+#include "upb/decode_fast.h"
+#endif
+
 #include "upb/port_def.inc"
 
 typedef struct {
@@ -119,6 +123,9 @@ struct upb_symtab {
   upb_arena *arena;
   upb_strtable syms;  /* full_name -> packed def ptr */
   upb_strtable files;  /* file_name -> upb_filedef* */
+#if UPB_FASTTBLAE
+  bool use_fasttable;
+#endif
 };
 
 /* Inside a symtab we store tagged pointers to specific def types. */
@@ -930,6 +937,138 @@ static void assign_layout_indices(const upb_msgdef *m, upb_msglayout_field *fiel
   }
 }
 
+#if UPB_FASTTABLE
+
+typedef enum {
+  FAST_TYPE_b1,
+  FAST_TYPE_v4,
+  FAST_TYPE_v8,
+  FAST_TYPE_z4,
+  FAST_TYPE_z8,
+  FAST_TYPE_f4,
+  FAST_TYPE_f8,
+  FAST_TYPE_s,
+  FAST_TYPE_b,
+  FAST_TYPE_NUM_PACKABLE = FAST_TYPE_f8 + 1,
+} fast_type;
+
+typedef enum {
+  FAST_CARD_s,
+  FAST_CARD_o,
+  FAST_CARD_r,
+  FAST_CARD_p,
+} fast_card;
+
+#define F(type, card, tagbytes) &upb_p##card##type##_##tagbytes##bt,
+
+#define CARD(type, card) \
+  F(type, card, 1) \
+  F(type, card, 2) \
+
+#define UNPACKABLE(type) \
+  CARD(type, s) \
+  CARD(type, o) \
+  CARD(type, r)
+
+#define PACKABLE(type) \
+  UNPACKABLE(type) \
+  CARD(type, p)
+
+#define MSG_F(card, tagbytes, size_ceil, ceil_arg) \
+  &upb_p##card##m_##tagbytes##bt_max##size_ceil##b,
+
+#define MSG_SIZES(card, tagbytes) \
+  MSG_F(card, tagbytes, 64, 64) \
+  MSG_F(card, tagbytes, 128, 128) \
+  MSG_F(card, tagbytes, 192, 192) \
+  MSG_F(card, tagbytes, 256, 256) \
+  MSG_F(card, tagbytes, max, -1)
+
+#define MSG_TAGBYTES(card) \
+  MSG_SIZES(card, 1) \
+  MSG_SIZES(card, 2)
+
+static _upb_field_parser *fasttable_func(fast_type type, fast_card card,
+                                         int tagbytes) {
+  static const _upb_field_parser *funcs[] = {
+    PACKABLE(b1)
+    PACKABLE(v4)
+    PACKABLE(v8)
+    PACKABLE(z4)
+    PACKABLE(z8)
+    PACKABLE(f4)
+    PACKABLE(f8)
+    UNPACKABLE(s)
+    UNPACKABLE(b)
+  };
+
+  const int unpackable_base = FAST_TYPE_NUM_PACKABLE * 4 * 2;
+  const int msg_base = unpackable_base + FAST_TYPE_NUM_UNPACKABLE * 3 * 2;
+
+  UPB_ASSERT(tagbytes == 0 || tagbytes == 1);
+  tagbytes--;
+  if (type < FAST_TYPE_NUM_PACKABLE) {
+    return funcs[(type * 4 + card) * 2 + tagbytes];
+  } else if (type < FAST_TYPE_NUM_UNPACKABLE) {
+    UPB_ASSERT(card != FAST_CARD_p);
+    return funcs[unpackable_base + (type * 3 + card) * 2 + tagbytes];
+  }
+}
+
+static _upb_field_parser *fasttable_msgfunc(fast_card card, int tagbytes,
+                                            int msg_size) {
+  static const _upb_field_parser *funcs[] = {
+    MSG_TAGBYTES(s)
+    MSG_TAGBYTES(o)
+    MSG_TAGBYTES(r)
+  };
+
+  int size_idx;
+  tagbytes--;
+
+  if (msg_size < 64) {
+    size_idx = 0;
+  } else if (msg_size < 128) {
+    size_idx = 1;
+  } else if (msg_size < 192) {
+    size_idx = 2;
+  } else if (msg_size < 256) {
+    size_idx = 3;
+  } else {
+    size_idx = 4;
+  }
+
+  return funcs[(card * 5 + size_idx) * 2 + tagbytes];
+}
+
+int fasttable_slot(const upb_fielddef *f) {
+  int num = upb_fielddef_number(f);
+  if (num < 16) {
+    return num;
+  } else if (num < 1 << 11) {
+    return (num & 0xf) | 0x10;
+  } else {
+    /* Doesn't fit in two-byte tag. */
+    return -1;
+  }
+}
+
+uint64_t fasttable_data(const upb_fielddef *f) {
+  uint64_t 
+}
+
+#undef PACKABLE
+#undef UNPACKABLE
+#undef CARD
+#undef F
+#undef MSG_F
+#undef MSG_SIZES
+#undef MSG_TAGBYTES
+
+#endif  /* UPB_FASTTABLE */
+
+static upb_msglayout *alloc_layout(const 
+
 /* This function is the dynamic equivalent of message_layout.{cc,h} in upbc.
  * It computes a dynamic layout for all of the fields in |m|. */
 static bool make_layout(const upb_symtab *symtab, const upb_msgdef *m) {
@@ -1724,8 +1863,7 @@ static bool create_msgdef(symtab_addctx *ctx, const char *prefix,
     ctx->layouts++;
   } else {
     /* Allocate now (to allow cross-linking), populate later. */
-    m->layout = upb_malloc(ctx->alloc,
-                           sizeof(*m->layout) + sizeof(_upb_fasttable_entry));
+    m->layout = alloc_layout(ctx, m);
   }
 
   oneofs = google_protobuf_DescriptorProto_oneof_decl(msg_proto, &n);
@@ -2092,6 +2230,9 @@ upb_symtab *upb_symtab_new(void) {
 
   s->arena = upb_arena_new();
   alloc = upb_arena_alloc(s->arena);
+#if UPB_FASTTABLE
+  s->use_fasttable = true;
+#endif
 
   if (!upb_strtable_init2(&s->syms, UPB_CTYPE_CONSTPTR, alloc) ||
       !upb_strtable_init2(&s->files, UPB_CTYPE_CONSTPTR, alloc)) {
