@@ -100,8 +100,8 @@ UPB_INLINE const upb_msglayout *decode_totablep(intptr_t table) {
 }
 
 UPB_INLINE
-const char *decode_isdonefallback_inl(upb_decstate *d, const char *ptr,
-                                      int overrun) {
+const char *decode_isdonefallback_inl(upb_decstate *d, const char *ptr) {
+  int overrun = ptr - d->end;
   if (overrun < d->limit) {
     /* Need to copy remaining data into patch buffer. */
     UPB_ASSERT(overrun < 16);
@@ -126,8 +126,7 @@ const char *decode_isdonefallback_inl(upb_decstate *d, const char *ptr,
   }
 }
 
-const char *decode_isdonefallback(upb_decstate *d, const char *ptr,
-                                  int overrun);
+const char *decode_isdonefallback(upb_decstate *d, const char *ptr);
 
 UPB_INLINE
 bool decode_isdone(upb_decstate *d, const char **ptr) {
@@ -137,7 +136,7 @@ bool decode_isdone(upb_decstate *d, const char **ptr) {
   } else if (UPB_LIKELY(overrun == d->limit)) {
     return true;
   } else {
-    *ptr = decode_isdonefallback(d, *ptr, overrun);
+    *ptr = decode_isdonefallback(d, *ptr);
     return false;
   }
 }

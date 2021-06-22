@@ -340,9 +340,8 @@ static upb_msg *decode_newsubmsg(upb_decstate *d,
 }
 
 UPB_NOINLINE
-const char *decode_isdonefallback(upb_decstate *d, const char *ptr,
-                                  int overrun) {
-  ptr = decode_isdonefallback_inl(d, ptr, overrun);
+const char *decode_isdonefallback(upb_decstate *d, const char *ptr) {
+  ptr = decode_isdonefallback_inl(d, ptr);
   if (ptr == NULL) {
     decode_err(d);
   }

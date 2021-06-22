@@ -67,8 +67,7 @@ typedef enum {
 
 UPB_NOINLINE
 static const char *fastdecode_isdonefallback(UPB_PARSE_PARAMS) {
-  int overrun = data;
-  ptr = decode_isdonefallback_inl(d, ptr, overrun);
+  ptr = decode_isdonefallback_inl(d, ptr);
   if (ptr == NULL) {
     return fastdecode_err(d);
   }
@@ -85,7 +84,6 @@ static const char *fastdecode_dispatch(UPB_PARSE_PARAMS) {
       *(uint32_t*)msg |= hasbits;  // Sync hasbits.
       return ptr;
     } else {
-      data = overrun;
       UPB_MUSTTAIL return fastdecode_isdonefallback(UPB_PARSE_ARGS);
     }
   }
