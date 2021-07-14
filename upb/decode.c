@@ -318,7 +318,7 @@ static const upb_msglayout_field *upb_find_field(const upb_msglayout *l,
     }
   }
 
-  for (idx = 0; idx < last; idx++) {
+  for (idx = 0; idx < (size_t)last; idx++) {
     if (l->fields[idx].number == field_number) {
       goto found;
     }

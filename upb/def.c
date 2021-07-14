@@ -406,7 +406,7 @@ const upb_oneofdef *upb_fielddef_realcontainingoneof(const upb_fielddef *f) {
 
 upb_msgval upb_fielddef_default(const upb_fielddef *f) {
   UPB_ASSERT(!upb_fielddef_issubmsg(f));
-  upb_msgval ret;
+  upb_msgval ret = {0};
   if (upb_fielddef_isstring(f)) {
     str_t *str = f->defaultval.str;
     if (str) {
@@ -1025,10 +1025,11 @@ static void assign_layout_indices(const upb_msgdef *m, upb_msglayout *l,
   int dense_below = 0;
   for (i = 0; i < n; i++) {
     upb_fielddef *f = (upb_fielddef*)upb_msgdef_itof(m, fields[i].number);
+    uint32_t i_u32 = i;
     UPB_ASSERT(f);
     f->layout_index = i;
-    if (i < UINT8_MAX && fields[i].number == i + 1 &&
-        (i == 0 || fields[i-1].number == i)) {
+    if (i < UINT8_MAX && fields[i].number == i_u32 + 1 &&
+        (i == 0 || fields[i-1].number == i_u32)) {
       dense_below = i + 1;
     }
   }
