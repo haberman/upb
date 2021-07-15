@@ -316,6 +316,32 @@ cc_library(
     deps = ["//third_party/wyhash"],
 )
 
+upb_amalgamation(
+    name = "gen_py_amalgamation",
+    outs = [
+        "py-upb.c",
+        "py-upb.h",
+    ],
+    amalgamator = ":amalgamate",
+    libs = [
+        ":upb",
+        ":fastdecode",
+        ":descriptor_upb_proto",
+        ":reflection",
+        ":port",
+        ":json",
+    ],
+    prefix = "py-",
+)
+
+cc_library(
+    name = "py_amalgamation",
+    srcs = ["py-upb.c"],
+    hdrs = ["py-upb.h"],
+    copts = UPB_DEFAULT_COPTS,
+    deps = ["//third_party/wyhash"],
+)
+
 exports_files(
     [
         "upb/json/parser.rl",
